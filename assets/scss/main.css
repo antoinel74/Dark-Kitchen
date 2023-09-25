@@ -175,4 +175,37 @@ table {
 }
 .header_main .header_background img {
   width: 100%;
+}
+
+.about {
+  max-width: 80%;
+  margin: auto;
+}
+.about h2 {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 20px 0;
+}
+.about .about_slogan {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 600;
+  padding: 20px 0;
+}
+.about .about_container {
+  display: flex;
+  align-items: center;
+}
+.about .about_container .about_text {
+  font-family: "Cutive Mono", monospace;
+  text-align: center;
+  align-content: space-around;
+  padding-left: 20px;
+}
+.about .about_container .kitchen-front {
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
