@@ -200,6 +200,56 @@ footer .content-wrapper div:last-of-type p:first-of-type {
     margin: 0 3rem;
   }
 }
+.google-map {
+  width: calc(100% - 80px);
+  color: #212021;
+  margin: 0 auto;
+  font-family: "Cutive Mono", monospace;
+}
+
+.google-map .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  margin: 40px 0;
+}
+.google-map .content-wrapper .text h2 {
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 30px;
+  font-size: clamp(15px, 5vw, 40px);
+}
+.google-map .content-wrapper .text p {
+  font-size: clamp(15px, 3vw, 20px);
+  line-height: 1.5;
+}
+.google-map .content-wrapper #map {
+  margin-top: 30px;
+  width: 100%;
+  height: 80%;
+}
+
+@media only screen and (min-width: 900px) {
+  .google-map .content-wrapper {
+    flex-direction: row;
+  }
+  .google-map .content-wrapper .text {
+    align-self: center;
+    padding: 0 50px;
+  }
+  .google-map .content-wrapper .text h2 {
+    font-family: "Permanent Marker", cursive;
+    font-size: calc(20px + 1rem);
+  }
+  .google-map .content-wrapper .text p {
+    font-size: calc(10px + 0.5rem);
+    line-height: 1.5;
+  }
+  .google-map .content-wrapper #map {
+    width: 40%;
+    height: 80%;
+  }
+}
 .header_main {
   width: 100%;
   position: relative;
