@@ -363,8 +363,8 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   }
 }
 .about {
-  max-width: 80%;
-  margin: auto;
+  max-width: 100%;
+  padding: 100px;
 }
 .about h2 {
   font-family: "Permanent Marker", cursive;
