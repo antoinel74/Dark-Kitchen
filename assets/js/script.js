@@ -13,12 +13,14 @@ function filterMenuByCategory(category) {
     let section = document.createElement("section");
     section.innerHTML = 
     `<div class="content">
-        <figure> <img src=${objet.image}> </figure>
-        <span class="genre"> ${objet.category} </span>
         <h2 class="titre"> ${objet.nom} </h2>
-        <p class="info"> Prix: ${objet.price} € </p>
-        <p class="info"> Description: ${objet.description}</p>
+        <figure> <img src=${objet.image}> </figure>
+        <div class="underPict">
+            <span class="category"> ${objet.category} </span>
+            <p class="prix"> Prix: ${objet.price} € </p>
         </div>
+        <p class="info"> ${objet.description}</p>
+    </div>
     `;
 
     article.appendChild(section);

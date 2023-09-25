@@ -1,15 +1,65 @@
+.filter{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: .3125rem;
+}
 .menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    .menu-list {
-      li{
-        display: flex;
-        flex-direction: column;
-        img {
-          width: 300px;
+    section{
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-top: 5%;
+            margin-top: 5%;
+            background-color:burlywood;
+            img{
+                width:300px;
+            }
+            .titre{
+                font-size: 24px;
+                padding:5px;
+                font-family: $font-title;
+            }
+            
+            .info{
+                font-family: $font-text;
+                padding:2%;
+            }
+            .underPict{
+                display: flex;
+                flex-direction: row;
+                width:300px;
+                justify-content: space-around;
+                align-items: center;
+                padding: 2%;
+                .prix{
+                    font-family: $font-title;
+                }
+                .category{
+                    background-color: beige;
+                    border:1px solid black;
+                    border-radius: 5%;
+                    padding:2%;
+                    font-family: $font-text;
+                }
+            }
         }
-      }
+    }  
+}
+@media only screen and (min-width: $break-desktop){
+    .menu {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        gap: .3125rem;
+        .content{
+            width: 450px;
+            height: 460px;
+        }
     }
-  }
-  
+}
+    

@@ -223,15 +223,66 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   width: 100%;
 }
 
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.3125rem;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.menu .menu-list li {
+.menu section .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 5%;
+  margin-top: 5%;
+  background-color: burlywood;
 }
-.menu .menu-list li img {
+.menu section .content img {
   width: 300px;
+}
+.menu section .content .titre {
+  font-size: 24px;
+  padding: 5px;
+  font-family: "Permanent Marker", cursive;
+}
+.menu section .content .info {
+  font-family: "Cutive Mono", monospace;
+  padding: 2%;
+}
+.menu section .content .underPict {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+}
+.menu section .content .underPict .prix {
+  font-family: "Permanent Marker", cursive;
+}
+.menu section .content .underPict .category {
+  background-color: beige;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 2%;
+  font-family: "Cutive Mono", monospace;
+}
+
+@media only screen and (min-width: 900px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 0.3125rem;
+  }
+  .menu .content {
+    width: 450px;
+    height: 460px;
+  }
 }/*# sourceMappingURL=main.css.map */
