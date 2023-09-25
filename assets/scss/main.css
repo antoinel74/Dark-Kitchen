@@ -152,7 +152,7 @@ footer .content-wrapper {
   margin: 0 auto 2vw;
 }
 footer .content-wrapper p {
-  font-size: 20px;
+  font-size: calc(10px + 0.5rem);
   line-height: 1.5;
 }
 footer .content-wrapper div:first-of-type p:first-of-type {
@@ -164,6 +164,20 @@ footer .content-wrapper nav a img {
   width: 30px;
   filter: invert(100%);
   cursor: pointer;
+}
+footer .content-wrapper nav a img:hover {
+  animation: scaleEffect 0.8s ease-in-out;
+}
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 footer .content-wrapper div:last-of-type {
   cursor: pointer;
@@ -179,6 +193,12 @@ footer .content-wrapper div:last-of-type p:first-of-type {
     margin: 0 5vw;
     justify-content: space-around;
   }
+  footer .content-wrapper p {
+    font-size: clamp(14px, 1.5vw, 20px);
+  }
+  footer .content-wrapper nav {
+    margin: 0 3rem;
+  }
 }
 .header_main {
   width: 100%;
@@ -190,11 +210,12 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   left: 50%;
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
 }
 .header_main .header_text h1 {
   font-family: "Permanent Marker", cursive;
-  font-size: 3.5vw;
-  line-height: 1.6;
+  font-size: 4em;
+  margin-bottom: 16px;
 }
 .header_main .header_text p {
   font-family: "Cutive Mono", monospace;
@@ -218,9 +239,128 @@ footer .content-wrapper div:last-of-type p:first-of-type {
 }
 .header_main .header_background {
   width: 100%;
+  height: 80vh;
+  position: relative;
+  aspect-ratio: 16/9;
 }
 .header_main .header_background img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 199;
+  background: #f7f7ed;
+}
+.navbar .nav_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 12px 36px;
+  font-family: "Courier Prime", monospace;
+  font-size: 1.2rem;
+}
+.navbar .logo {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2em;
+  color: #1e1e1e;
+  margin-left: 12px;
+}
+.navbar .logo:visited {
+  color: black;
+  text-decoration: none;
+}
+.navbar .nav_link {
+  transition: 0.5s ease;
+  color: #1e1e1e;
+  animation: transform 0.3s ease-in-out;
+}
+.navbar .nav_link:hover {
+  text-decoration: underline;
+}
+.navbar a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar a:visited {
+  text-decoration: none;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  margin: 12px;
+  border: none;
+  background: none;
+  border-radius: 5px;
+}
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #1e1e1e;
+}
+
+@media (max-width: 768px) {
+  .header_main .header_text h1 {
+    font-size: 3em;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .navbar a:visited {
+    text-decoration: none;
+  }
+  .nav_menu {
+    position: fixed;
+    z-index: 200;
+    left: 100%;
+    top: 50px;
+    background-color: white;
+    flex-direction: column;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.4s;
+    padding: 64px 0px;
+  }
+  .nav_menu.active {
+    left: 0;
+  }
+  .nav_menu.active .nav_btn {
+    padding: 8px 16px;
+  }
+  .nav_menu.active .nav_btn:hover {
+    font-size: 110%;
+  }
 }
 
 .filter {
