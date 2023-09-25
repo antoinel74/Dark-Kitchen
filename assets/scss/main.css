@@ -261,7 +261,7 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   position: fixed;
   top: 0;
   z-index: 199;
-  background: #f7f7ed;
+  background: none;
 }
 .navbar .nav_menu {
   display: flex;
@@ -362,7 +362,6 @@ footer .content-wrapper div:last-of-type p:first-of-type {
     font-size: 110%;
   }
 }
-
 .filter {
   display: flex;
   align-items: center;
