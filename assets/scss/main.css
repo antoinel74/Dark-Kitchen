@@ -214,8 +214,8 @@ footer .content-wrapper div:last-of-type p:first-of-type {
 }
 .header_main .header_text h1 {
   font-family: "Permanent Marker", cursive;
-  font-size: 2em;
-  margin-bottom: 12px;
+  font-size: 4em;
+  margin-bottom: 16px;
 }
 .header_main .header_text p {
   font-family: "Cutive Mono", monospace;
@@ -316,6 +316,9 @@ footer .content-wrapper div:last-of-type p:first-of-type {
 }
 
 @media (max-width: 768px) {
+  .header_main .header_text h1 {
+    font-size: 3em;
+  }
   .hamburger {
     display: block;
   }
