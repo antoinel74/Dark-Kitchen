@@ -1,6 +1,12 @@
 //Mixin pour la média-queries de la version desktop
 @mixin responsive-desktop {
-    @media screen and (min-width : $break-desktop){
-        @content;
-    }
+  @media screen and (min-width: $break-desktop) {
+    @content;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
