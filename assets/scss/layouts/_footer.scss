@@ -1,0 +1,11 @@
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 80px);
+    padding: 20px 40px;
+    background-color: $primary-dark-brown;
+    color: $primary-white;
+    font-family: $font-text;
+}

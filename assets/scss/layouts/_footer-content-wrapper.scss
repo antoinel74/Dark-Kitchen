@@ -1,0 +1,50 @@
+
+footer .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 2vw;
+    
+    p {
+        font-size: $normal-text-size-footer;
+        line-height: 1.5;
+    }
+
+    div:first-of-type {
+        p:first-of-type {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
+    nav a img {
+        margin: 20px 0;
+        width: 30px;
+        filter: invert(100%);
+        cursor: pointer;
+    }
+
+    div:last-of-type {
+        cursor: pointer;
+        p:first-of-type {
+            font-weight: 600;
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: $break-desktop) {
+
+    footer .content-wrapper {
+        flex-direction: row;
+        height: 200px;
+        margin: 0 5vw;
+        justify-content: space-around;
+    }
+
+
+}
