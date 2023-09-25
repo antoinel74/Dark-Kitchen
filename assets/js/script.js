@@ -1,33 +1,36 @@
-let menu = document.querySelector(".menu");
+let article = document.querySelector("article");
 
-objets.forEach((objet) => {
-    const card = document.createElement("div");
+const categoryButtons = document.querySelectorAll(".category-button");
 
-    // Créer une div pour le contenu principal
-    const contentDiv = document.createElement("div");
+function filterMenuByCategory(category) {
+  const filteredMenu = menu.filter(objet => {
+    return category === "All" || objet.category.some(item => item.includes(category));
+  });
 
-    const image = document.createElement("img");
-    image.src = objet.image;
-    contentDiv.appendChild(image);
+  article.innerHTML = "";
 
-    const nom = document.createElement("h2");
-    nom.textContent = objet.nom;
-    contentDiv.appendChild(nom);
+  filteredMenu.forEach(objet => {
+    let section = document.createElement("section");
+    section.innerHTML = 
+    `<div class="content">
+        <figure> <img src=${objet.image}> </figure>
+        <span class="genre"> ${objet.category} </span>
+        <h2 class="titre"> ${objet.nom} </h2>
+        <p class="info"> Prix: ${objet.price} € </p>
+        <p class="info"> Description: ${objet.description}</p>
+        </div>
+    `;
 
-    const category = document.createElement("p");
-    category.textContent = objet.category;
-    contentDiv.appendChild(category);
+    article.appendChild(section);
+    section.setAttribute("class", "card");
+  });
+}
 
-    const description = document.createElement("p");
-    description.textContent = objet.description;
-    contentDiv.appendChild(description);
-
-    const price = document.createElement("p");
-    price.textContent = `${objet.price} €`;
-    contentDiv.appendChild(price);
-
-    card.appendChild(contentDiv); // Ajouter contentDiv à card
-
-    menu.appendChild(card);
+categoryButtons.forEach(button => {
+  button.addEventListener("click", function () {
+    const selectedCategory = button.getAttribute("data-genre");
+    filterMenuByCategory(selectedCategory);
+  });
 });
 
+filterMenuByCategory("All");

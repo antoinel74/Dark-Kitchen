@@ -1,0 +1,15 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .menu-list {
+      li{
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+  
