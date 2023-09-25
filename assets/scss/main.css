@@ -175,4 +175,17 @@ table {
 }
 .header_main .header_background img {
   width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu .menu-list li {
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu-list li img {
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */
