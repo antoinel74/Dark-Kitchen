@@ -5,12 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dark kitchen</title>
-    <link rel="stylesheet" href="./assets/scss/main.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/scss/main.css" />
   </head>
   <body>
+    <!--NAVBAR-->
+    <header>
+      <nav class="navbar">
+        <a href="#">
+          <p class="logo">DarkKitchen</p>
+        </a>
+        <ul class="nav_menu">
+          <li class="nav_item">
+            <a href="#" class="nav_link">Home</a>
+          </li>
+          <li class="nav_item">
+            <a href="#services" class="nav_link">Menu</a>
+          </li>
+          <li class="nav_item">
+            <a href="#products" class="nav_link">About</a>
+          </li>
+        </ul>
+        <button class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!--FIRST SECTION-->
     <section class="header_main">
       <div class="header_text">
-        <h1>Dark Kitchen, colorful food</h1>
+        <h1 class="header_title">Dark Kitchen, colorful food</h1>
         <p>250, Dark Street, London, GB, 70666</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,25 +50,59 @@
         </svg>
       </div>
       <figure class="header_background">
-        <img src="./assets/img/headerbackground.jpg" alt="header-background" />
+        <img src="./assets/img/headerbackground4.jpg" alt="header-background" />
       </figure>
     </section>
-    <!-- About -->
-    <section>
-      <div class="about">
-        <h2>About</h2>
-        <blockquote class="about_slogan">“Good food served in a
-        good place only.”</blockquote>
-        <div class="about_container">
-          <div class="img_kitchen">
-            <img src="./assets/img/DevantureCuisine.png" class="kitchen-front" alt="kitchen-front">
-          </div>
-          <div class="about_text">
-            <p>As stated in our tagline, we serve good food in a good place. The main purpose is to serve you high quality food with high quality ingredients made by high quality chefs. A single bite will leave you impressed, 100% guaranteed.</p>
+    <!-- Menu debut -->
+    <nav class="filter">
+      <button class="category-button" data-genre="All">All</button>
+      <button class="category-button" data-genre="Entrée">Entrée</button>
+      <button class="category-button" data-genre="Plats">Plats</button>
+      <button class="category-button" data-genre="Boisson">Boisson</button>
+    </nav>
+    <article class="menu"></article>
+        <!-- About -->
+      <section>
+        <div class="about">
+          <h2>About</h2>
+          <blockquote class="about_slogan">“Good food served in a
+          good place only.”</blockquote>
+          <div class="about_container">
+            <div class="img_kitchen">
+              <img src="./assets/img/DevantureCuisine.png" class="kitchen-front" alt="kitchen-front">
+            </div>
+            <div class="about_text">
+              <p>As stated in our tagline, we serve good food in a good place. The main purpose is to serve you high quality food with high quality ingredients made by high quality chefs. A single bite will leave you impressed, 100% guaranteed.</p>
+            </div>
           </div>
         </div>
+      </section>
+        <!-- About - End -->
+    <!-- Menu fin -->
+    <footer>
+      <div class="content-wrapper">
+        <div>
+          <p><strong>Dark Kitchen, colorful food</strong></p>
+          <p>250, Dark Street, London, GB, 70666</p>
+          <p>(012) 345-6789</p>
+        </div>
+        <nav>
+          <a
+            href="https://github.com/antoinel74/Dark-Kitchen.git"
+            target="_blank"
+          >
+            <img src="./assets/img/github.png" alt="lien vers le repo github" />
+          </a>
+        </nav>
+        <div>
+          <p>Hours</p>
+          <p>dark.kitchen@gmail.com</p>
+        </div>
       </div>
-    </section>
-    <!-- About - End -->
+    </footer>
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/script.js"></script>
+
   </body>
 </html>
