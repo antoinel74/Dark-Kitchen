@@ -105,7 +105,7 @@
   display: none;
   margin: 12px;
   border: none;
-  background: $cream;
+  background: none;
   border-radius: 5px;
   .bar {
     display: block;
@@ -147,7 +147,7 @@
     top: 50px;
     background-color: white;
     flex-direction: column;
-    width: 400px;
+    width: 80%;
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
