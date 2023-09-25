@@ -7,10 +7,11 @@
     left: 50%;
     text-align: center;
     transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
     h1 {
       font-family: $font-title;
-      font-size: 3.5vw;
-      line-height: 1.6;
+      font-size: 2em;
+      margin-bottom: 12px;
     }
     p {
       font-family: $font-text;
@@ -40,8 +41,128 @@
   }
   .header_background {
     width: 100%;
+    height: 80vh;
+    position: relative;
+    aspect-ratio: 16/9;
     img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
+}
+
+.navbar {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 199;
+  background: $cream;
+  .nav_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin: 12px 36px;
+    font-family: $font-textbold;
+    font-size: 1.2rem;
+  }
+  .logo {
+    font-family: $font-title;
+    font-size: 2em;
+    color: #1e1e1e;
+    margin-left: 12px;
+    &:visited {
+      color: black;
+      text-decoration: none;
+    }
+  }
+  .nav_link {
+    transition: 0.5s ease;
+    color: #1e1e1e;
+    animation: transform 0.3s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  margin: 12px;
+  border: none;
+  background: $cream;
+  border-radius: 5px;
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #1e1e1e;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar {
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a:visited {
+      text-decoration: none;
+    }
+  }
+  .nav_menu {
+    position: fixed;
+    z-index: 200;
+    left: 100%;
+    top: 50px;
+    background-color: white;
+    flex-direction: column;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.4s;
+    padding: 64px 0px;
+  }
+  .nav_menu.active {
+    left: 0;
+    .nav_btn {
+      padding: 8px 16px;
+    }
+    .nav_btn:hover {
+      font-size: 110%;
+    }
+    .nav_link:hover {
     }
   }
 }
