@@ -152,7 +152,7 @@ footer .content-wrapper {
   margin: 0 auto 2vw;
 }
 footer .content-wrapper p {
-  font-size: 20px;
+  font-size: calc(10px + 0.5rem);
   line-height: 1.5;
 }
 footer .content-wrapper div:first-of-type p:first-of-type {
@@ -164,6 +164,20 @@ footer .content-wrapper nav a img {
   width: 30px;
   filter: invert(100%);
   cursor: pointer;
+}
+footer .content-wrapper nav a img:hover {
+  animation: scaleEffect 0.8s ease-in-out;
+}
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 footer .content-wrapper div:last-of-type {
   cursor: pointer;
@@ -178,6 +192,12 @@ footer .content-wrapper div:last-of-type p:first-of-type {
     height: 200px;
     margin: 0 5vw;
     justify-content: space-around;
+  }
+  footer .content-wrapper p {
+    font-size: clamp(14px, 1.5vw, 20px);
+  }
+  footer .content-wrapper nav {
+    margin: 0 3rem;
   }
 }
 .header_main {
