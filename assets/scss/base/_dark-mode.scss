@@ -1,3 +1,114 @@
 
+body.dark {
+
+    background-color: #000;
+    color: $primary-white;
+
+    header .navbar {
+        a {
+            color: $cream;
+        }
+        p {
+            color: $cream;
+        }
+    }
+
+    .header_main {
+        .header_background {
+            filter: invert(100%);
+        }
+    }
+
+    .filter{
+        .category-button{
+            background: $primary-dark;
+            color: $cream;
+        }
+    }
+
+    .menu {
+        article {
+            .content {
+                .body {
+                    .underPict {
+                        .category {
+                            background-color: $primary-dark;
+                            border:1px solid $cream;
+                        }
+                    }
+                }
+                .cart {
+                    background-color: $primary-dark;
+                    border:1px solid $cream;
+                }
+            }
+        }
+    }
+
+    .google-map {
+        color: $cream;
+    }
+    
+}
 
 
+@media only screen and (min-width: $break-desktop){
+    body.dark {
+
+        background-color: #000;
+        color: $primary-white;
+    
+        header .navbar {
+            a {
+                color: $cream;
+            }
+            p {
+                color: $cream;
+            }
+        }
+    
+        .header_main {
+            .header_background {
+                filter: invert(100%);
+            }
+        }
+
+        .filter{
+            .category-button{
+                background: $primary-dark;
+                color: $cream;
+            }
+        }
+    
+        .menu {
+            article {
+                .content {
+                    background-color: $primary-dark;
+                    box-shadow: 20px 20px #3a3a3a;
+                    h2 {
+                        color: $cream;
+                    }
+                    .body {
+                        color: $cream;
+                        .underPict {
+                            .category {
+                                background-color: $primary-dark;
+                                border:1px solid $cream;
+                            }
+                        }
+                    }
+                    .cart {
+                        background-color: $primary-dark;
+                        border:1px solid $cream;
+                        color: $cream;
+                    }
+                }
+            }
+        }
+
+        .google-map {
+            color: $cream;
+        }
+        
+    }
+}
