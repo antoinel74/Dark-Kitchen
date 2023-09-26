@@ -450,61 +450,142 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 0.3125rem;
+  gap: 8px;
+  margin-top: 2%;
+}
+.filter .category-button {
+  position: relative;
+  background: #f7f7ed;
+  border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.menu section .content {
+.menu article .content {
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding-top: 5%;
   margin-top: 5%;
-  background-color: burlywood;
 }
-.menu section .content img {
-  width: 300px;
+.menu article .content img {
+  width: 250px;
 }
-.menu section .content .titre {
+.menu article .content .titre {
   font-size: 24px;
   padding: 5px;
   font-family: "Permanent Marker", cursive;
+  margin-bottom: 2%;
 }
-.menu section .content .info {
-  font-family: "Cutive Mono", monospace;
-  padding: 2%;
+.menu article .content .body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.menu section .content .underPict {
+.menu article .content .body .underPict {
   display: flex;
   flex-direction: row;
-  width: 300px;
-  justify-content: space-around;
+  width: 250px;
+  justify-content: space-between;
   align-items: center;
   padding: 2%;
 }
-.menu section .content .underPict .prix {
+.menu article .content .body .underPict .prix {
   font-family: "Permanent Marker", cursive;
 }
-.menu section .content .underPict .category {
+.menu article .content .body .underPict .category {
   background-color: beige;
   border: 1px solid black;
   border-radius: 5%;
   padding: 2%;
   font-family: "Cutive Mono", monospace;
 }
+.menu article .content .body .info {
+  font-family: "Cutive Mono", monospace;
+  padding: 2%;
+}
+.menu article .content .cart {
+  background-color: beige;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 2%;
+  font-family: "Cutive Mono", monospace;
+  margin-bottom: 2%;
+}
 
 @media only screen and (min-width: 900px) {
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 2%;
+  }
+  .filter .category-button {
+    position: relative;
+    background: #f7f7ed;
+    border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
+    color: black;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+  }
   .menu {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     gap: 0.3125rem;
   }
-  .menu .content {
-    width: 450px;
-    height: 460px;
+  .menu article .content {
+    width: 400px;
+    position: relative;
+    background: #f7f7ed;
+    border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
+    color: black;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    justify-content: space-between;
+  }
+  .menu article .content:hover {
+    border-radius: 0% 0% 50% 50%/0% 0% 5% 5%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .menu article .content img {
+    width: 300px;
+  }
+  .menu article .content .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu article .content .body .underPict {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+  }
+  .menu article .content .body .underPict .prix {
+    font-family: "Permanent Marker", cursive;
+  }
+  .menu article .content .body .underPict .category {
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 5%;
+    padding: 2%;
+    font-family: "Cutive Mono", monospace;
+  }
+  .menu article .content .body .info {
+    font-family: "Cutive Mono", monospace;
+    padding: 2%;
+    height: 150px;
   }
 }/*# sourceMappingURL=main.css.map */
