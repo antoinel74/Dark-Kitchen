@@ -445,6 +445,13 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   height: auto;
 }
 
+.TitreMenu {
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-size: 2rem;
+  padding-top: 2%;
+}
+
 .filter {
   display: flex;
   align-items: center;
@@ -459,6 +466,24 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
 }
 
+@media only screen and (min-width: 900px) {
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 2%;
+  }
+  .filter .category-button {
+    position: relative;
+    background: #f7f7ed;
+    border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
+    color: black;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+  }
+}
 .menu {
   display: flex;
   flex-direction: column;
@@ -521,22 +546,6 @@ footer .content-wrapper div:last-of-type p:first-of-type {
 }
 
 @media only screen and (min-width: 900px) {
-  .filter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 8px;
-    margin-top: 2%;
-  }
-  .filter .category-button {
-    position: relative;
-    background: #f7f7ed;
-    border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
-    color: black;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s ease;
-  }
   .menu {
     display: grid;
     grid-template-columns: 33% 33% 33%;
