@@ -387,12 +387,15 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 600px;
 }
 .about .about_container .about_text {
   font-family: "Cutive Mono", monospace;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 .about .about_container .about_text h3 {
@@ -404,15 +407,36 @@ footer .content-wrapper div:last-of-type p:first-of-type {
 }
 .about .about_container figure {
   width: 100%;
+  aspect-ratio: 16/12;
+  position: relative;
 }
 .about .about_container figure img {
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .about .about_container {
     flex-direction: column;
+    padding-bottom: 48px;
+    margin: 0 48px;
+  }
+  .about .about_container .about_text h3 {
+    margin-top: 48px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .about .about_container {
+    padding: 36px 0;
+  }
+  .about .about_container figure {
+    margin: 0 36px;
+  }
+  .about .about_container .about_text {
+    margin: 0 36px;
   }
 }
 .filter {
