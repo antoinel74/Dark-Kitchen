@@ -1,0 +1,66 @@
+
+.google-map .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    margin: 40px 0 ;
+
+    .text {
+
+        h2 {
+            font-family: $font-title;
+            margin-bottom: 30px;
+            font-size: clamp(15px, 5vw, 40px);
+        }
+
+        p {
+            font-size: clamp(15px, 3vw, 20px);
+            line-height: 1.5;
+        }
+    }
+
+
+    #map {
+        margin-top: 30px;
+        width: 100%;
+        height: 80%;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: $break-desktop) {
+
+    .google-map .content-wrapper {
+        flex-direction: row;
+
+        .text {
+
+            align-self: center;
+            padding: 0 50px;
+
+            h2 {
+                font-family: $font-title;
+                font-size: calc(20px + 1rem);
+            }
+    
+            p {
+                font-size: calc(10px + .5rem);
+                line-height: 1.5;
+            }
+        }
+
+        #map {
+            width: 40%;
+            height: 80%;
+            // Pour couleur sépia de la carte ?
+            // filter: sepia(100%) saturate(0.2); 
+        }
+
+    }
+
+
+}
