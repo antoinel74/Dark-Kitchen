@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dark kitchen</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" type="text/css" href="./assets/scss/main.css" />
   </head>
   <body>
@@ -64,35 +67,45 @@
       <button class="category-button" data-genre="Boisson">Boisson</button>
     </nav>
     <article class="menu"></article>
-        <!-- About -->
-      <section>
-        <div class="about">
-          <h2>About</h2>
-          <blockquote class="about_slogan">“Good food served in a
-          good place only.”</blockquote>
-          <div class="about_container">
-            <div class="img_kitchen">
-              <img src="./assets/img/DevantureCuisine.png" class="kitchen-front" alt="kitchen-front">
-            </div>
-            <div class="about_text">
-              <p>As stated in our tagline, we serve good food in a good place. The main purpose is to serve you high quality food with high quality ingredients made by high quality chefs. A single bite will leave you impressed, 100% guaranteed.</p>
-            </div>
-          </div>
+    <!-- About -->
+    <section class="about">
+      <div class="about_title">
+        <h2>About</h2>
+        <blockquote class="about_slogan">
+          “Good food served in a good place only.”
+        </blockquote>
+      </div>
+      <div class="about_container">
+        <figure class="img_kitchen">
+          <img
+            src="./assets/img/DevantureCuisine.png"
+            class="kitchen-front"
+            alt="kitchen-front"
+          />
+        </figure>
+        <div class="about_text">
+          <p>
+            As stated in our tagline, we serve good food in a good place. The
+            main purpose is to serve you high quality food with high quality
+            ingredients made by high quality chefs. A single bite will leave you
+            impressed, 100% guaranteed.
+          </p>
         </div>
-      </section>
-        <!-- About - End -->
+      </div>
+    </section>
+    <!-- About - End -->
     <!-- Menu fin -->
     <!-- SECTION GOOGLE MAP START -->
     <section class="google-map">
-        <div class="content-wrapper">
-            <div class="text">
-                <h2>Where to find us  ?</h2>
-                <p>250, Dark Street, London</p>
-                <p>GB, 70666</p>
-                <p>(012) 345-6789</p>
-            </div>
-            <div id="map"></div>
+      <div class="content-wrapper">
+        <div class="text">
+          <h2>Where to find us ?</h2>
+          <p>250, Dark Street, London</p>
+          <p>GB, 70666</p>
+          <p>(012) 345-6789</p>
         </div>
+        <div id="map"></div>
+      </div>
     </section>
     <!-- SECTION GOOGLE MAP END -->
     <footer>
@@ -120,10 +133,12 @@
     <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="./assets/js/map.js"></script>
     <!-- SCRIPTS END -->
-</body>
+  </body>
 </html>
