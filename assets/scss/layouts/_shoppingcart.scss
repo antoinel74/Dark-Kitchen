@@ -22,7 +22,9 @@
     border-radius: 5px;
     h2 {
       font-family: $font-title;
+      padding-bottom: 12px;
       margin-bottom: 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.611);
     }
     #checkoutButton {
       margin-top: 12px;

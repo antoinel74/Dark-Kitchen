@@ -691,7 +691,9 @@ header .navbar a:visited {
 }
 .modal .modal-content h2 {
   font-family: "Permanent Marker", cursive;
+  padding-bottom: 12px;
   margin-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.611);
 }
 .modal .modal-content #checkoutButton {
   margin-top: 12px;
