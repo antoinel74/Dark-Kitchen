@@ -1,36 +1,52 @@
 // About
 .about {
-    max-width: 100%;
-    padding: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    .about_title {
+        padding: 36px 0;
+    }
     h2 {
         font-family: $font-title;
         text-align: center;
         font-size: 2rem;
-        padding-top: 20px 0;
+        margin-bottom: 24px;
     }
     .about_slogan {
         display:flex;
         justify-content: center;
         text-align: center;
         font-family: $font-text;
-        font-weight: 600;
-        padding: 20px 0;
+        font-weight: 800;
     }
     .about_container {
+        width: 100%;
         display: flex;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+
         .about_text {
             font-family: $font-text;
-            text-align: center; 
-            align-content: space-around;
-            padding-left: 20px;
+            @include flexCenter;
+            flex-direction: column;
+            h3 {
+                width: 100%;
+                font-size: 1.5rem;
+                text-align: left;
+                font-weight: 800;
+                padding-bottom: 24px;
+            }
         }
-        .kitchen-front {
-        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
-        height: auto;
-        }
-    }
-    
+        figure {
+            width: 100%;
+            img {
+                width: 100%;
+                box-shadow: $eliShadow;
+            } 
+    }  
 }
-
-
+}
+@media (max-width: 768px) {
+    .about .about_container {
+        flex-direction: column;
+    }
+}
