@@ -4,7 +4,7 @@
         → 'map' est l'ID de l'élément HTML où la carte sera affichée.
         → .setView([51.505, -0.09], 13) définit la vue initiale de la carte. Ici, la carte est centrée sur les coordonnées [51.505, -0.09] avec un niveau de zoom initial de 13.
 */
-let map = L.map('map').setView([51.505, -0.09], 13);
+let map = L.map('map').setView([51.505, -0.09], 15);
 
 
 /*
@@ -17,6 +17,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+// ↓ Pour une couleur "light_all" de la tuile
+// L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"', {}).addTo(map);
 
 
 /*
@@ -24,19 +26,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         → [51.50853, -0.12574] sont les coordonnées du marqueur (latitude et longitude).
         → .addTo(map) ajoute ce marqueur à la carte créée précédemment (map).
 */
-let marker = L.marker([51.512, -0.078]).addTo(map);
+// let marker = L.marker([51.512, -0.078]).addTo(map);
+let marker = L.marker([51.504, -0.09]).addTo(map);
 
 
 /* 
     Fonction qui prend un seul argument, e, qui représente l'événement de clic sur la carte. L'argument e est un objet qui contient des informations sur le clic, notamment les coordonnées (latitude et longitude) du point où l'utilisateur a cliqué.
  */
-// function onMapClick(e) {
-//     alert("You clicked the map at " + e.latlng);
-// }
-
-// map.on('click', onMapClick);
-
-
 let popup = L.popup();
 
 function onMapClick(e) {
