@@ -30,6 +30,10 @@
       font-family: $font-text;
       width: 100%;
       @include flexCenter;
+<<<<<<< HEAD
+=======
+      flex-wrap: wrap;
+>>>>>>> 71e5da07d21ca8cf85216c5df4dc3773dd26958d
       flex-direction: column;
       h3 {
         width: 100%;
@@ -53,8 +57,30 @@
     }
   }
 }
+<<<<<<< HEAD
 @media (max-width: 768px) {
   .about .about_container {
     flex-direction: column;
+=======
+@media (max-width: 968px) {
+  .about .about_container {
+    flex-direction: column;
+    padding-bottom: 48px;
+    margin: 0 48px;
+    .about_text h3 {
+      margin-top: 48px;
+    }
+  }
+}
+@media only screen and (min-width: $break-desktop) {
+  .about .about_container {
+    padding: 36px 0;
+  }
+  .about .about_container figure {
+    margin: 0 36px;
+  }
+  .about .about_container .about_text {
+    margin: 0 36px;
+>>>>>>> 71e5da07d21ca8cf85216c5df4dc3773dd26958d
   }
 }

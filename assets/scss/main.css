@@ -445,23 +445,9 @@ footer .content-wrapper div:last-of-type p:first-of-type {
 }
 .about .about_container .about_text {
   font-family: "Cutive Mono", monospace;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.about .about_container .about_text h3 {
-  width: 100%;
-  font-size: 1.5rem;
-  text-align: left;
-  font-weight: 800;
-  padding-bottom: 24px;
-}
-.about .about_container figure {
-  width: 100%;
-  aspect-ratio: 16/12;
-  position: relative;
+  text-align: center;
+  align-content: space-around;
+  padding-left: 20px;
 }
 .about .about_container figure img {
   width: 100%;
@@ -478,11 +464,6 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   padding-top: 2%;
 }
 
-@media (max-width: 768px) {
-  .about .about_container {
-    flex-direction: column;
-  }
-}
 .filter {
   display: flex;
   align-items: center;
