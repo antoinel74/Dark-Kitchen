@@ -260,11 +260,12 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   left: 50%;
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
 }
 .header_main .header_text h1 {
   font-family: "Permanent Marker", cursive;
-  font-size: 3.5vw;
-  line-height: 1.6;
+  font-size: 4em;
+  margin-bottom: 16px;
 }
 .header_main .header_text p {
   font-family: "Cutive Mono", monospace;
@@ -288,7 +289,222 @@ footer .content-wrapper div:last-of-type p:first-of-type {
 }
 .header_main .header_background {
   width: 100%;
+  height: 80vh;
+  position: relative;
+  aspect-ratio: 16/9;
 }
 .header_main .header_background img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 199;
+  background: none;
+}
+.navbar .nav_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: 12px 36px;
+  font-family: "Courier Prime", monospace;
+  font-size: 1.2rem;
+}
+.navbar .logo {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2em;
+  color: #1e1e1e;
+  margin-left: 12px;
+}
+.navbar .logo:visited {
+  color: black;
+  text-decoration: none;
+}
+.navbar .nav_link {
+  transition: 0.5s ease;
+  color: #1e1e1e;
+  animation: transform 0.3s ease-in-out;
+}
+.navbar .nav_link:hover {
+  text-decoration: underline;
+}
+.navbar a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar a:visited {
+  text-decoration: none;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  margin: 12px;
+  border: none;
+  background: none;
+  border-radius: 5px;
+}
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #1e1e1e;
+}
+
+@media (max-width: 768px) {
+  .header_main .header_text h1 {
+    font-size: 3em;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .navbar a:visited {
+    text-decoration: none;
+  }
+  .nav_menu {
+    position: fixed;
+    z-index: 200;
+    left: 100%;
+    top: 50px;
+    background-color: white;
+    flex-direction: column;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.4s;
+    padding: 64px 0px;
+  }
+  .nav_menu.active {
+    left: 0;
+  }
+  .nav_menu.active .nav_btn {
+    padding: 8px 16px;
+  }
+  .nav_menu.active .nav_btn:hover {
+    font-size: 110%;
+  }
+}
+.about {
+  max-width: 80%;
+  margin: auto;
+}
+.about h2 {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 20px 0;
+}
+.about .about_slogan {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 600;
+  padding: 20px 0;
+}
+.about .about_container {
+  display: flex;
+  align-items: center;
+}
+.about .about_container .about_text {
+  font-family: "Cutive Mono", monospace;
+  text-align: center;
+  align-content: space-around;
+  padding-left: 20px;
+}
+.about .about_container .kitchen-front {
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+  height: auto;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.3125rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 5%;
+  margin-top: 5%;
+  background-color: burlywood;
+}
+.menu section .content img {
+  width: 300px;
+}
+.menu section .content .titre {
+  font-size: 24px;
+  padding: 5px;
+  font-family: "Permanent Marker", cursive;
+}
+.menu section .content .info {
+  font-family: "Cutive Mono", monospace;
+  padding: 2%;
+}
+.menu section .content .underPict {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+}
+.menu section .content .underPict .prix {
+  font-family: "Permanent Marker", cursive;
+}
+.menu section .content .underPict .category {
+  background-color: beige;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 2%;
+  font-family: "Cutive Mono", monospace;
+}
+
+@media only screen and (min-width: 900px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 0.3125rem;
+  }
+  .menu .content {
+    width: 450px;
+    height: 460px;
+  }
 }/*# sourceMappingURL=main.css.map */
