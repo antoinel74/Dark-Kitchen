@@ -301,7 +301,7 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   position: absolute;
 }
 
-.navbar {
+header .navbar {
   width: 100%;
   min-height: 60px;
   display: flex;
@@ -313,7 +313,10 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   z-index: 199;
   background: none;
 }
-.navbar .nav_menu {
+header .navbar .navbar-right {
+  display: flex;
+}
+header .navbar .navbar-right .nav_menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -322,29 +325,47 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   font-family: "Courier Prime", monospace;
   font-size: 1.2rem;
 }
-.navbar .logo {
+header .navbar .navbar-right .shoppingcart {
+  margin-right: 16px;
+  background: none;
+  border: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+header .navbar .navbar-right .shoppingcart .total_count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 4px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 0.8em;
+}
+header .navbar .logo {
   font-family: "Permanent Marker", cursive;
   font-size: 2em;
   color: #1e1e1e;
   margin-left: 12px;
 }
-.navbar .logo:visited {
+header .navbar .logo:visited {
   color: black;
   text-decoration: none;
 }
-.navbar .nav_link {
+header .navbar .nav_link {
   transition: 0.5s ease;
   color: #1e1e1e;
   animation: transform 0.3s ease-in-out;
 }
-.navbar .nav_link:hover {
+header .navbar .nav_link:hover {
   text-decoration: underline;
 }
-.navbar a {
+header .navbar a {
   text-decoration: none;
   cursor: pointer;
 }
-.navbar a:visited {
+header .navbar a:visited {
   text-decoration: none;
 }
 
@@ -466,6 +487,7 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
 }
 
 @media (max-width: 968px) {
@@ -587,6 +609,7 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   padding: 2%;
   font-family: "Cutive Mono", monospace;
   margin-bottom: 2%;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 900px) {
@@ -641,4 +664,52 @@ footer .content-wrapper div:last-of-type p:first-of-type {
     padding: 2%;
     height: 150px;
   }
+}
+/* Styles pour le modal */
+.modal {
+  position: fixed;
+  font-family: "Cutive Mono", monospace;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 7000;
+  overflow: auto;
+  line-height: 1.4;
+}
+.modal .modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  border-radius: 5px;
+}
+.modal .modal-content h2 {
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 12px;
+}
+.modal .modal-content #checkoutButton {
+  margin-top: 12px;
+  border: none;
+  background: #f7f7ed;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: "Cutive Mono", monospace;
+  padding: 12px;
+  transition: transform 0.3s ease;
+}
+.modal .modal-content #checkoutButton:hover {
+  transform: scale(105%);
+}
+.modal .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
