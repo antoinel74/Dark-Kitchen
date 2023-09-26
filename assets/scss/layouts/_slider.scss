@@ -1,0 +1,20 @@
+.events {
+  width: 100%;
+  box-sizing: border-box;
+  .events_title {
+    padding: 36px 0;
+  }
+  h2 {
+    font-family: $font-title;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  .events_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+  }
+}
