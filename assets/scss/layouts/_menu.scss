@@ -3,6 +3,8 @@
   font-family: $font-title;
   font-size: 2rem;
   padding-top: 2%;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 .filter {
   display: flex;
@@ -11,7 +13,7 @@
   flex-direction: row;
   gap: 8px;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   .category-button {
     position: relative;
     cursor: pointer;
