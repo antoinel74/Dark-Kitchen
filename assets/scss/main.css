@@ -620,11 +620,12 @@ header .navbar a:visited {
 @media only screen and (min-width: 900px) {
   .menu {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 32% 32% 32%;
     gap: 0.3125rem;
   }
   .menu article .content {
     width: 400px;
+    height: 550px;
     position: relative;
     background: #f7f7ed;
     border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
@@ -639,6 +640,7 @@ header .navbar a:visited {
   }
   .menu article .content img {
     width: 300px;
+    height: 225px;
   }
   .menu article .content .body {
     display: flex;
