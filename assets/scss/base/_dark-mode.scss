@@ -81,10 +81,45 @@ body.dark {
 
     // BUTTONS - filter
     .filter{
-        .category-button{
-            background: $primary-dark;
-            color: $cream;
+        .category-button {
+            cursor: pointer;
+
+            svg {
+                filter: invert(100%);
+            }
+            &:hover {
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i})  { 
+                        animation: translateEffect 500ms ease-in-out;
+                        @keyframes translateEffect {
+                            0% {
+                                transform: translateY(0px) rotate(0deg);
+                            }
+                            30% {
+                                transform: translateY(-3px) rotate(5deg);
+                            }
+                            70% {
+                                transform: translateY(-3px) rotate(-5deg);
+                            }
+                            100% {
+                                transform: translateY(0px) rotate(0deg);
+                            }
+                        }
+                    }
+                }
+            }
         }
+        // &:hover {
+            
+        //     @for $i from 1 through 5 {
+        //         &:nth-child(#{$i})  { 
+        //             transform: translateY(-10px);
+        //         }
+        //     }
+
+        //     // border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+        //     // box-shadow: 10px 10px #3a3a3a;
+        // }
     }
 
     // SECTION - menu

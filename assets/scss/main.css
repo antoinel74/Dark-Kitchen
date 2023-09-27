@@ -854,8 +854,95 @@ body.dark .header_main .header_background {
   filter: invert(100%);
 }
 body.dark .filter .category-button {
-  background: #212021;
-  color: #f7f7ed;
+  cursor: pointer;
+}
+body.dark .filter .category-button svg {
+  filter: invert(100%);
+}
+body.dark .filter .category-button:hover:nth-child(1) {
+  animation: translateEffect 500ms ease-in-out;
+}
+@keyframes translateEffect {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+  70% {
+    transform: translateY(-3px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+body.dark .filter .category-button:hover:nth-child(2) {
+  animation: translateEffect 500ms ease-in-out;
+}
+@keyframes translateEffect {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+  70% {
+    transform: translateY(-3px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+body.dark .filter .category-button:hover:nth-child(3) {
+  animation: translateEffect 500ms ease-in-out;
+}
+@keyframes translateEffect {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+  70% {
+    transform: translateY(-3px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+body.dark .filter .category-button:hover:nth-child(4) {
+  animation: translateEffect 500ms ease-in-out;
+}
+@keyframes translateEffect {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+  70% {
+    transform: translateY(-3px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+body.dark .filter .category-button:hover:nth-child(5) {
+  animation: translateEffect 500ms ease-in-out;
+}
+@keyframes translateEffect {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+  70% {
+    transform: translateY(-3px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 body.dark .menu article .content .body .underPict .category {
   background-color: #212021;
