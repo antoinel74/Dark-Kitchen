@@ -494,7 +494,7 @@ header .navbar a:visited {
 }
 .about .about_container figure {
   width: 90%;
-  height: 80vh;
+  max-height: 80vh;
   aspect-ratio: 8/6;
   position: relative;
 }
