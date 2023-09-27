@@ -824,7 +824,7 @@ body.dark header .modal-content #checkoutButton, body.dark header .modal .modal-
   border: 1px solid #f7f7ed;
 }
 body.dark header .modal-content #checkoutButton:hover, body.dark header .modal .modal-content .clear_btn:hover, .modal body.dark header .modal-content .clear_btn:hover {
-  background-color: darkgreen;
+  background-color: green;
 }
 body.dark header .modal-content .clear_btn:hover {
   background-color: rgb(211, 92, 92) !important;
@@ -835,7 +835,7 @@ body.dark header .modal-content li button {
   border-color: #f7f7ed;
 }
 body.dark header .modal-content li button:nth-of-type(1):hover {
-  background-color: darkgreen;
+  background-color: green;
 }
 body.dark header .modal-content li button:nth-of-type(2):hover {
   background-color: orange;
