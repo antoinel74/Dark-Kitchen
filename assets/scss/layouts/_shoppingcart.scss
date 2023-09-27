@@ -57,6 +57,8 @@
             font-family: $font-text;
             &:hover {
               transform: scale(105%);
+              background-color: black;
+              color: white;
             }
           }
           .add_btn {

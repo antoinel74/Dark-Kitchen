@@ -737,6 +737,8 @@ header .navbar a:visited {
 }
 .modal .modal-content table tbody td .remove_btn:hover, .modal .modal-content table tbody td .add_btn:hover, .modal .modal-content table tbody td .decrease_btn:hover {
   transform: scale(105%);
+  background-color: black;
+  color: white;
 }
 .modal .modal-content table tbody td .add_btn, .modal .modal-content table tbody td .decrease_btn {
   font-family: "Courier Prime", monospace;
