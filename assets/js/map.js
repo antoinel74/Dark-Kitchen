@@ -21,6 +21,7 @@ let myTileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', 
 // L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"', {}).addTo(map);
 
 
+
 /*
     Créer un marqueur sur la carte.
         → [51.50853, -0.12574] sont les coordonnées du marqueur (latitude et longitude).
@@ -46,7 +47,9 @@ map.on('click', onMapClick);
 
 
 
-// localisation de l'utislisateur
+/* 
+    localisation de l'utilisateur
+*/
 
 navigator.geolocation.watchPosition(success, error);
 
