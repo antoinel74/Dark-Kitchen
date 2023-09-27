@@ -11,10 +11,33 @@
   flex-direction: row;
   gap: 8px;
   margin-top: 2%;
+  margin-bottom: 2%;
   .category-button {
     position: relative;
+    cursor: pointer;
     background: $cream;
     border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    &:hover {
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation: translateEffect 500ms ease-in-out;
+          @keyframes translateEffect {
+            0% {
+              transform: translateY(0px) rotate(0deg);
+            }
+            30% {
+              transform: translateY(-3px) rotate(5deg);
+            }
+            70% {
+              transform: translateY(-3px) rotate(-5deg);
+            }
+            100% {
+              transform: translateY(0px) rotate(0deg);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
