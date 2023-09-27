@@ -134,6 +134,10 @@ table {
   border-spacing: 0;
 }
 
+body {
+  width: 100%;
+}
+
 footer {
   width: calc(100% - 80px);
   padding: 20px 40px;
@@ -438,9 +442,13 @@ header .navbar a:visited {
 .about {
   width: 100%;
   box-sizing: border-box;
+  padding-top: 48px;
 }
 .about .about_title {
   padding: 36px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .about h2 {
   font-family: "Permanent Marker", cursive;
@@ -451,25 +459,32 @@ header .navbar a:visited {
 .about .about_slogan {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
   font-family: "Cutive Mono", monospace;
   font-weight: 800;
+  margin: 0 12px;
 }
 .about .about_container {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   height: 600px;
+  padding-bottom: 48px;
+  margin-top: 64px;
 }
 .about .about_container .about_text {
   font-family: "Cutive Mono", monospace;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 24px;
+  padding: 0 24px;
+  margin-top: 48px;
 }
 .about .about_container .about_text h3 {
   width: 100%;
@@ -479,8 +494,9 @@ header .navbar a:visited {
   padding-bottom: 24px;
 }
 .about .about_container figure {
-  width: 100%;
-  aspect-ratio: 16/12;
+  width: 90%;
+  max-height: 80vh;
+  aspect-ratio: 8/6;
   position: relative;
 }
 .about .about_container figure img {
@@ -496,21 +512,9 @@ header .navbar a:visited {
   .about .about_container {
     flex-direction: column;
     padding-bottom: 48px;
-    margin: 0 48px;
   }
   .about .about_container .about_text h3 {
-    margin-top: 48px;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .about .about_container {
-    padding: 36px 0;
-  }
-  .about .about_container figure {
-    margin: 0 36px;
-  }
-  .about .about_container .about_text {
-    margin: 0 36px;
+    margin-top: 36px;
   }
 }
 .TitreMenu {
@@ -617,11 +621,12 @@ header .navbar a:visited {
 @media only screen and (min-width: 900px) {
   .menu {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 32% 32% 32%;
     gap: 0.3125rem;
   }
   .menu article .content {
     width: 400px;
+    height: 550px;
     position: relative;
     background: #f7f7ed;
     border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
@@ -636,6 +641,7 @@ header .navbar a:visited {
   }
   .menu article .content img {
     width: 300px;
+    height: 225px;
   }
   .menu article .content .body {
     display: flex;
