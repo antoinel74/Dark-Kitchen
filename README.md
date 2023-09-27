@@ -4,7 +4,7 @@
 - Proposition de plats à via une application de livraison ou un système de commande en ligne.
 
 
-    - Type de défi : consolidation
+    - Type de défi : Booster les skills
     - Durée : 3 days
     - Date limite : 27/09 - 17h.
     
