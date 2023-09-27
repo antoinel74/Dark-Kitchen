@@ -31,35 +31,30 @@ body.dark {
 
         .modal-content {
             background-color: #000;
-            h2 {
+            .modal-header h2 {
                 border-bottom: 1px solid $cream;
             }
-            #checkoutButton {
-                background-color: $primary-dark;
-                color: $cream;
-                border: 1px solid $cream;
+            table {
+                tbody {
+                    td {
+                        .remove_btn:hover {
+                            border-color: $cream;
+                            background-color: rgb(182, 77, 77);
+                        }
+                        .add_btn:hover {
+                            border-color: $cream;
+                            background-color: $primary-dark!important;
+                        }
+                    }
+                }
             }
-            // .clear_btn {
-            //     background-color: #000!important;
-            // }
             #checkoutButton:hover {
                 background-color: green;
+                color: $cream;
+                border-color: $cream;
             }
             .clear_btn:hover {
-                background-color: rgb(211, 92, 92)!important;
-            }
-            li {
-                button {
-                    background-color: $primary-dark;
-                    color: $cream;
-                    border-color: $cream;
-                }
-                button:nth-of-type(1):hover {
-                    background-color: green;
-                }
-                button:nth-of-type(2):hover {
-                    background-color: orange;
-                }
+                background-color: rgb(182, 77, 77)!important;
             }
         }
     } 
@@ -83,7 +78,7 @@ body.dark {
     .filter{
         .category-button {
             cursor: pointer;
-
+            background-color: $primary-dark;
             svg {
                 filter: invert(100%);
             }
@@ -109,17 +104,6 @@ body.dark {
                 }
             }
         }
-        // &:hover {
-            
-        //     @for $i from 1 through 5 {
-        //         &:nth-child(#{$i})  { 
-        //             transform: translateY(-10px);
-        //         }
-        //     }
-
-        //     // border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
-        //     // box-shadow: 10px 10px #3a3a3a;
-        // }
     }
 
     // SECTION - menu
@@ -136,6 +120,7 @@ body.dark {
                 }
                 .cart {
                     background-color: $primary-dark;
+                    color: $cream;
                     border:1px solid $cream;
                 }
             }
@@ -190,13 +175,13 @@ body.dark {
             }
         }
 
-        // BUTTONS - filter
-        .filter{
-            .category-button{
-                background: $primary-dark;
-                color: $cream;
-            }
-        }
+        // // BUTTONS - filter
+        // .filter{
+        //     .category-button{
+        //         background: $primary-dark;
+        //         color: $cream;
+        //     }
+        // }
     
         // SECTION - menu
         .menu {

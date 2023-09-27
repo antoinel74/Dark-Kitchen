@@ -232,6 +232,7 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   margin-top: 30px;
   width: 100%;
   height: 80%;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 900px) {
@@ -838,30 +839,24 @@ body.dark header .navbar .shoppingcart svg {
 body.dark header .modal-content {
   background-color: #000;
 }
-body.dark header .modal-content h2 {
+body.dark header .modal-content .modal-header h2 {
   border-bottom: 1px solid #f7f7ed;
 }
-body.dark header .modal-content #checkoutButton, body.dark header .modal .modal-content .clear_btn, .modal body.dark header .modal-content .clear_btn {
-  background-color: #212021;
-  color: #f7f7ed;
-  border: 1px solid #f7f7ed;
+body.dark header .modal-content table tbody td .remove_btn:hover, body.dark header .modal .modal-content table tbody td .add_btn:hover, .modal body.dark header .modal-content table tbody td .add_btn:hover, body.dark header .modal .modal-content table tbody td .decrease_btn:hover, .modal body.dark header .modal-content table tbody td .decrease_btn:hover {
+  border-color: #f7f7ed;
+  background-color: rgb(182, 77, 77);
+}
+body.dark header .modal-content table tbody td .add_btn:hover, body.dark header .modal .modal-content table tbody td .decrease_btn:hover, .modal body.dark header .modal-content table tbody td .decrease_btn:hover {
+  border-color: #f7f7ed;
+  background-color: #212021 !important;
 }
 body.dark header .modal-content #checkoutButton:hover, body.dark header .modal .modal-content .clear_btn:hover, .modal body.dark header .modal-content .clear_btn:hover {
   background-color: green;
-}
-body.dark header .modal-content .clear_btn:hover {
-  background-color: rgb(211, 92, 92) !important;
-}
-body.dark header .modal-content li button {
-  background-color: #212021;
   color: #f7f7ed;
   border-color: #f7f7ed;
 }
-body.dark header .modal-content li button:nth-of-type(1):hover {
-  background-color: green;
-}
-body.dark header .modal-content li button:nth-of-type(2):hover {
-  background-color: orange;
+body.dark header .modal-content .clear_btn:hover {
+  background-color: rgb(182, 77, 77) !important;
 }
 body.dark .header_main .header_text .arrow {
   filter: invert(100%);
@@ -871,6 +866,7 @@ body.dark .header_main .header_background {
 }
 body.dark .filter .category-button {
   cursor: pointer;
+  background-color: #212021;
 }
 body.dark .filter .category-button svg {
   filter: invert(100%);
@@ -966,6 +962,7 @@ body.dark .menu article .content .body .underPict .category {
 }
 body.dark .menu article .content .cart {
   background-color: #212021;
+  color: #f7f7ed;
   border: 1px solid #f7f7ed;
 }
 body.dark .google-map {
@@ -995,10 +992,6 @@ body.dark footer .content-wrapper {
   }
   body.dark .header_main .header_background {
     filter: invert(100%);
-  }
-  body.dark .filter .category-button {
-    background: #212021;
-    color: #f7f7ed;
   }
   body.dark .menu article .content {
     background-color: #212021;
