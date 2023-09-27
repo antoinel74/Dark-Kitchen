@@ -3,7 +3,7 @@
 .about {
   width: 100%;
   box-sizing: border-box;
-  padding-top: 48px;
+  padding-top: 64px;
   .about_title {
     padding: 36px 0;
     display: flex;
@@ -13,7 +13,7 @@
   h2 {
     font-family: $font-title;
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(15px, 5vw, 40px);
     margin-bottom: 24px;
   }
   .about_slogan {
@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     text-align: center;
     font-family: $font-text;
-    font-weight: 800;
+    font-size: clamp(15px, 3vw, 20px);
     margin: 0 12px;
   }
   .about_container {
@@ -39,14 +39,16 @@
       flex-direction: column;
       flex-wrap: wrap;
       margin-left: 24px;
+      font-size: clamp(15px, 3vw, 20px);
+      line-height: 1.4;
       margin-top: 48px;
       margin-right: 24px;
       width: 50%;
       h3 {
         width: 100%;
-        font-size: 1.5rem;
+        font-family: $font-title;
+        font-size: clamp(15px, 5vw, 40px);
         text-align: left;
-        font-weight: 800;
         padding-bottom: 24px;
       }
     }

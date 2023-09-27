@@ -210,12 +210,14 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   width: calc(100% - 80px);
   color: #212021;
   margin: 0 auto;
+  margin-top: 88px;
+  margin-bottom: 88px;
   font-family: "Cutive Mono", monospace;
 }
 .google-map .content-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   height: 500px;
   margin: 40px 0;
 }
@@ -252,8 +254,8 @@ footer .content-wrapper div:last-of-type p:first-of-type {
     line-height: 1.5;
   }
   .google-map .content-wrapper #map {
-    width: 40%;
-    height: 80%;
+    width: 50%;
+    height: 100%;
   }
 }
 .header_main {
@@ -442,7 +444,7 @@ header .navbar a:visited {
 .about {
   width: 100%;
   box-sizing: border-box;
-  padding-top: 48px;
+  padding-top: 64px;
 }
 .about .about_title {
   padding: 36px 0;
@@ -453,7 +455,7 @@ header .navbar a:visited {
 .about h2 {
   font-family: "Permanent Marker", cursive;
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(15px, 5vw, 40px);
   margin-bottom: 24px;
 }
 .about .about_slogan {
@@ -462,7 +464,7 @@ header .navbar a:visited {
   flex-wrap: wrap;
   text-align: center;
   font-family: "Cutive Mono", monospace;
-  font-weight: 800;
+  font-size: clamp(15px, 3vw, 20px);
   margin: 0 12px;
 }
 .about .about_container {
@@ -481,15 +483,17 @@ header .navbar a:visited {
   flex-direction: column;
   flex-wrap: wrap;
   margin-left: 24px;
+  font-size: clamp(15px, 3vw, 20px);
+  line-height: 1.4;
   margin-top: 48px;
   margin-right: 24px;
   width: 50%;
 }
 .about .about_container .about_text h3 {
   width: 100%;
-  font-size: 1.5rem;
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(15px, 5vw, 40px);
   text-align: left;
-  font-weight: 800;
   padding-bottom: 24px;
 }
 .about .about_container figure {
@@ -525,6 +529,8 @@ header .navbar a:visited {
   font-family: "Permanent Marker", cursive;
   font-size: 2rem;
   padding-top: 2%;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .filter {
@@ -534,7 +540,7 @@ header .navbar a:visited {
   flex-direction: row;
   gap: 8px;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 .filter .category-button {
   position: relative;

@@ -1,65 +1,64 @@
-
 .google-map {
-    width: calc(100% - 80px);
-    color: $primary-dark;
-    margin: 0 auto;
-    font-family: $font-text;
+  width: calc(100% - 80px);
+  color: $primary-dark;
+  margin: 0 auto;
+  margin-top: 88px;
+  margin-bottom: 88px;
+  font-family: $font-text;
 
-    .content-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 500px;
-        margin: 40px 0 ;
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    margin: 40px 0;
 
-        .text {
+    .text {
+      h2 {
+        font-family: $font-title;
+        margin-bottom: 30px;
+        font-size: clamp(15px, 5vw, 40px);
+      }
 
-            h2 {
-                font-family: $font-title;
-                margin-bottom: 30px;
-                font-size: clamp(15px, 5vw, 40px);
-            }
-
-            p {
-                font-size: clamp(15px, 3vw, 20px);
-                line-height: 1.5;
-            }
-        }
-
-        #map {
-            margin-top: 30px;
-            width: 100%;
-            height: 80%;
-            z-index: 1;
-            // filter: sepia(100%) saturate(0.6); 
-        }
+      p {
+        font-size: clamp(15px, 3vw, 20px);
+        line-height: 1.5;
+      }
     }
+
+    #map {
+      margin-top: 30px;
+      width: 100%;
+      height: 80%;
+      z-index: 1;
+      // filter: sepia(100%) saturate(0.6);
+    }
+  }
 }
 
 @media only screen and (min-width: $break-desktop) {
+  .google-map .content-wrapper {
+    flex-direction: row;
 
-    .google-map .content-wrapper {
-        flex-direction: row;
+    .text {
+      align-self: center;
+      padding: 0 5%;
 
-        .text {
-            align-self: center;
-            padding: 0 5%;
+      h2 {
+        font-family: $font-title;
+        font-size: clamp(15px, 3vw, 35px);
+      }
 
-            h2 {
-                font-family: $font-title;
-                font-size: clamp(15px, 3vw, 35px);
-            }
-    
-            p {
-                // font-size: calc(10px + .5rem);
-                font-size: clamp(15px, 2vw, 20px);
-                line-height: 1.5;
-            }
-        }
-
-        #map {
-            width: 40%;
-            height: 80%;
-        }
+      p {
+        // font-size: calc(10px + .5rem);
+        font-size: clamp(15px, 2vw, 20px);
+        line-height: 1.5;
+      }
     }
+
+    #map {
+      width: 50%;
+      height: 100%;
+    }
+  }
 }
