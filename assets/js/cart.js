@@ -4,6 +4,7 @@ const cartTotal = document.getElementById("cartTotal");
 const closeCartModalHandler = document.getElementById("closeModal");
 const shoppingCartButton = document.querySelector(".shoppingcart");
 const addButtons = document.querySelectorAll(".cart");
+const total_count = document.querySelector(".total_count"); // Sélectionnez la span pour le nombre total d'articles
 
 let cart = [];
 let total = 0;
@@ -54,21 +55,23 @@ function addToCart(carte) {
 
 // Update the cart modal
 function updateCartModalContent() {
-  cartList.innerHTML = "";
-  total = 0;
+  const cartTable = document.getElementById("cartTable");
+  const cartBody = document.getElementById("cartItems");
+  cartBody.innerHTML = "";
+  let updatedTotal = 0; // Initialiser le total à l'extérieur de la boucle
+
   cart.forEach((item, index) => {
-    let listItem = document.createElement("li");
-    listItem.innerText = `${item.name} - €${item.price} - (${item.quantity})`;
-    listItem.classList.add("cart_items");
+    let row = cartBody.insertRow();
+    let productNameCell = row.insertCell(0);
+    let priceCell = row.insertCell(1);
+    let quantityCell = row.insertCell(2); // Cellule pour la quantité
+    let totalCell = row.insertCell(3);
+    let actionsCell = row.insertCell(4);
 
-    let increaseBtn = document.createElement("button");
-    increaseBtn.innerText = "+";
-    increaseBtn.addEventListener("click", () => {
-      item.quantity += 1;
-      total += item.price;
-      updateCartModalContent();
-    });
+    productNameCell.innerText = item.name;
+    priceCell.innerText = `€${item.price.toFixed(2)}`;
 
+    // Boutons de quantité
     let decreaseBtn = document.createElement("button");
     decreaseBtn.innerText = "-";
     decreaseBtn.addEventListener("click", () => {
@@ -79,33 +82,45 @@ function updateCartModalContent() {
       }
     });
 
-    let removeButton = document.createElement("button");
-    removeButton.innerText = "x";
-    removeButton.classList.add("remove-button");
-    removeButton.addEventListener("click", () => {
-      removeFromCart(index);
+    let increaseBtn = document.createElement("button");
+    increaseBtn.innerText = "+";
+    increaseBtn.addEventListener("click", () => {
+      item.quantity += 1;
+      total += item.price;
       updateCartModalContent();
     });
 
-    listItem.appendChild(increaseBtn);
-    listItem.appendChild(decreaseBtn);
-    listItem.appendChild(removeButton);
-    cartList.appendChild(listItem);
-    total += item.price * item.quantity;
+    // Afficher la quantité dans la cellule de quantité
+    quantityCell.appendChild(decreaseBtn);
+    quantityCell.appendChild(document.createTextNode(` ${item.quantity} `));
+    quantityCell.appendChild(increaseBtn);
+
+    let removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.addEventListener("click", () => {
+      total -= item.price * item.quantity;
+      cart.splice(index, 1);
+      updateCartModalContent();
+    });
+
+    // Ajouter les boutons d'action dans la colonne "Actions"
+    actionsCell.appendChild(removeButton);
+
+    totalCell.innerText = `€${(item.price * item.quantity).toFixed(2)}`;
+
+    // Ajouter le coût de l'élément actuel au total mis à jour
+    updatedTotal += item.price * item.quantity;
   });
 
-  cartTotal.textContent = total.toFixed(2);
-}
+  cartTotal.innerText = `€${updatedTotal.toFixed(2)}`; // Mettre à jour le total
 
-// Remove button
-function removeFromCart(index) {
-  total -= cart[index].price;
-  cart.splice(index, 1);
+  // Mettez à jour le nombre total d'articles dans la span
+  let totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+  total_count.innerText = totalCount;
 }
-
-// Clear cart
-function clearCart() {
-  cart = [];
-  total = 0;
-  updateCartModalContent();
-}
+  // Clear cart
+  function clearCart() {
+    cart = [];
+    total = 0;
+    updateCartModalContent();
+  }
