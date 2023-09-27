@@ -620,7 +620,7 @@ header .navbar a:visited {
 @media only screen and (min-width: 900px) {
   .menu {
     display: grid;
-    grid-template-columns: 32% 32% 32%;
+    grid-template-columns: 33% 33% 33%;
     gap: 0.3125rem;
   }
   .menu article .content {
