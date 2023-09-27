@@ -1,6 +1,14 @@
 let section = document.querySelector(".menu");
-
 const categoryButtons = document.querySelectorAll(".category-button");
+
+// DEBUG ADD TO CART FOR FILTERED MENU //
+section.addEventListener("click", function (event) {
+  if (event.target.classList.contains("cart")) {
+    addToCart(event.target.closest(".card"));
+    updateCartModalContent();
+  }
+});
+// DEBUG ADD TO CART FOR FILTERED MENU //
 
 function filterMenuByCategory(category) {
   const filteredMenu = menu.filter((objet) => {
@@ -16,7 +24,7 @@ function filterMenuByCategory(category) {
     let article = document.createElement("article");
     article.innerHTML = `<div class="content">
         <h2 class="titre"> ${objet.nom} </h2>
-        <figure> <img src=${objet.image}> </figure>
+        <figure class="content_fig"> <img src=${objet.image} class="content_img"> </figure>
         <div class="body">
           <div class="underPict">
               <span class="category"> ${objet.category} </span>
