@@ -25,7 +25,7 @@ Le site doit être un site Web d'une seule page, avec différentes fonctionnalit
 
 #### Language.s de programmation utilisé.s :
 
-    HTML
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
     CSS - SASS
     JavaScript
 
@@ -33,9 +33,10 @@ Le site doit être un site Web d'une seule page, avec différentes fonctionnalit
 
     Trello  
     Gather  
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
     Photoshop
-    ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Pexels](https://img.shields.io/badge/Pexels-05A081?style=for-the-badge&logo=pexels&logoColor=white)
 
 [Dark-Kitchen .README](https://github.com/becodeorg/CRL-KELLER-6/blob/main/1.TRAIL/2.The-Hill/1.DOM/7.Dark-Kitchen/readme.md)
 
