@@ -13,7 +13,7 @@ let map = L.map('map').setView([51.505, -0.09], 15);
         → maxZoom: 19 définit le niveau de zoom maximal de la carte à 19.
         → attribution est une attribution qui doit apparaître sur la carte pour indiquer que les données sont fournies par OpenStreetMap.
 */
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let myTileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
@@ -29,7 +29,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // let marker = L.marker([51.512, -0.078]).addTo(map);
 let marker = L.marker([51.504, -0.09]).addTo(map);
 
-
 /* 
     Fonction qui prend un seul argument, e, qui représente l'événement de clic sur la carte. L'argument e est un objet qui contient des informations sur le clic, notamment les coordonnées (latitude et longitude) du point où l'utilisateur a cliqué.
  */
@@ -43,3 +42,32 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+
+
+
+
+// localisation de l'utislisateur
+
+navigator.geolocation.watchPosition(success, error);
+
+function success(pos) {
+
+    const lat = pos.coords.latitude;
+    const lng = pos.coords.longitude;
+    const accuracy = pos.coords.accuracy;
+    
+    L.marker([lat, lng]).addTo(map);
+    L.circle([lat, lng], { radius: accuracy }).addTo(map);
+
+}
+
+function error(err) {
+    // console.log(err);
+    
+    if (err.code === 1) {
+        alert('Please allow geolocalisation access');
+    }
+    else {
+        alert('Cannot get current location');
+    }
+}

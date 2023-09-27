@@ -13,30 +13,59 @@
     />
     <link rel="stylesheet" type="text/css" href="./assets/scss/main.css" />
   </head>
-  <body>
+  <body class="light">
     <!--NAVBAR-->
     <header>
       <nav class="navbar">
         <a href="#">
           <p class="logo">DarkKitchen</p>
         </a>
-        <ul class="nav_menu">
-          <li class="nav_item">
-            <a href="#" class="nav_link">Home</a>
+        <div class="navbar-right">
+          <ul class="nav_menu">
+            <li class="nav_item">
+              <a href="#" class="nav_link">Home</a>
+            </li>
+            <li class="nav_item">
+              <a href="#services" class="nav_link">Menu</a>
+            </li>
+            <li class="nav_item">
+              <a href="#products" class="nav_link">About</a>
+            </li>
+            <li class="nav_item darkmode dark">
+              <input type="checkbox" id="darkmode-toggle"/>
+              <label for="darkmode-toggle">
           </li>
-          <li class="nav_item">
-            <a href="#services" class="nav_link">Menu</a>
-          </li>
-          <li class="nav_item">
-            <a href="#products" class="nav_link">About</a>
-          </li>
-        </ul>
-        <button class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+          </ul>
+          <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <button class="shoppingcart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1.4em"
+              viewBox="0 0 576 512"
+              fill="#1E1E1E"
+            >
+              <path
+                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+              />
+            </svg>
+            <span class="total_count">""</span>
+          </button>
+        </div>
       </nav>
+      <div class="modal" id="cartModal">
+        <div class="modal-content">
+          <span class="close-modal" id="closeModal">&times;</span>
+          <h2>Your Shopping Cart</h2>
+          <ul id="cartItems"></ul>
+          <p>Total: €<span id="cartTotal">0.00</span></p>
+          <button id="checkoutButton">Order now</button>
+          <button onclick="clearCart()" class="clear_btn">Clear cart</button>
+        </div>
+      </div>
     </header>
 
     <!--FIRST SECTION-->
@@ -67,27 +96,38 @@
       <button class="category-button" data-genre="Plats">Plats</button>
       <button class="category-button" data-genre="Boisson">Boisson</button>
     </nav>
-    <section class="menu">
-      <!-- generations des cartes du menu ici -->
-    </section>
+    <section class="menu"></section>
     <!-- Menu fin -->
-        <!-- About -->
-      <section>
-        <div class="about">
-          <h2>About</h2>
-          <blockquote class="about_slogan">“Good food served in a
-          good place only.”</blockquote>
-          <div class="about_container">
-            <div class="img_kitchen">
-              <img src="./assets/img/DevantureCuisine.png" class="kitchen-front" alt="kitchen-front">
-            </div>
-            <div class="about_text">
-              <p>As stated in our tagline, we serve good food in a good place. The main purpose is to serve you high quality food with high quality ingredients made by high quality chefs. A single bite will leave you impressed, 100% guaranteed.</p>
-            </div>
-          </div>
+
+    <!-- About -->
+    <section class="about">
+      <div class="about_title">
+        <h2>About</h2>
+        <blockquote class="about_slogan">
+          “Good food served in a good place only.”
+        </blockquote>
+      </div>
+      <div class="about_container">
+        <figure class="img_kitchen">
+          <img
+            src="./assets/img/DevantureCuisine.png"
+            class="kitchen-front"
+            alt="kitchen-front"
+          />
+        </figure>
+        <div class="about_text">
+          <h3>Chef's promise</h3>
+          <p>
+            "As stated in our tagline, we serve good food in a good place. The
+            main purpose is to serve you high quality food with high quality
+            ingredients made by high quality chefs. A single bite will leave you
+            impressed, 100% guaranteed."
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
     <!-- About - End -->
+
     <!-- SECTION GOOGLE MAP START -->
     <section class="google-map">
       <div class="content-wrapper">
@@ -101,6 +141,7 @@
       </div>
     </section>
     <!-- SECTION GOOGLE MAP END -->
+
     <footer>
       <div class="content-wrapper">
         <div>
@@ -111,9 +152,10 @@
         <nav>
           <a
             href="https://github.com/antoinel74/Dark-Kitchen.git"
-            target="_blank"
-          >
-            <img src="./assets/img/github.png" alt="lien vers le repo github" />
+            target="_blank">
+            <figure>
+              <img src="./assets/img/github.png" alt="lien vers le repo github" />
+            </figure>
           </a>
         </nav>
         <div>
@@ -126,12 +168,12 @@
     <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/plats.js"></script>
     <script src="./assets/js/menu.js"></script>
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
+    <script src="./assets/js/darkmode.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
     <script src="./assets/js/map.js"></script>
+    <script src="./assets/js/cart.js"></script>
     <!-- SCRIPTS END -->
   </body>
 </html>

@@ -1,0 +1,157 @@
+
+body.dark {
+
+    background-color: #000;
+    color: $primary-white;
+
+    // HEADER - navbar
+    header .navbar {
+        a {
+            color: $cream;
+        }
+        p {
+            color: $cream;
+        }
+
+        .hamburger {
+            filter: invert(100%);
+        }
+        .nav_menu {
+            background-color: $primary-dark;
+            border: 1px solid $cream;
+        }
+    }
+
+    // HEADER - main
+    .header_main {
+        // Partie texuelle
+        .header_text {
+            // Flèche
+            .arrow {
+                filter: invert(100%);
+            }
+        }
+        // Image de background
+        .header_background {
+            filter: invert(100%);
+        }
+    }
+
+    // BUTTONS - filter
+    .filter{
+        .category-button{
+            background: $primary-dark;
+            color: $cream;
+        }
+    }
+
+    // SECTION - menu
+    .menu {
+        article {
+            .content {
+                .body {
+                    .underPict {
+                        .category {
+                            background-color: $primary-dark;
+                            border:1px solid $cream;
+                        }
+                    }
+                }
+                .cart {
+                    background-color: $primary-dark;
+                    border:1px solid $cream;
+                }
+            }
+        }
+    }
+
+    // SECTION - google map
+    .google-map {
+        color: $cream;
+    }
+
+    // FOOTER
+    footer {
+        background-color: #000;
+        .content-wrapper {
+            border-top: 1px solid $cream;
+        }
+    }
+    
+}
+
+
+// ----------------------------------------------------------
+//             MEDIA QUERIES
+// ----------------------------------------------------------
+
+@media only screen and (min-width: $break-desktop){
+    body.dark {
+
+        background-color: #000;
+        color: $primary-white;
+    
+        // HEADER - navbar
+        header .navbar {
+            a {
+                color: $cream;
+            }
+            p {
+                color: $cream;
+            }
+
+            .nav_menu {
+                background-color: transparent;
+                border: none;
+            }
+        }
+    
+        // HEADER - main
+        .header_main {
+            .header_background {
+                filter: invert(100%);
+            }
+        }
+
+        // BUTTONS - filter
+        .filter{
+            .category-button{
+                background: $primary-dark;
+                color: $cream;
+            }
+        }
+    
+        // SECTION - menu
+        .menu {
+            article {
+                .content {
+                    background-color: $primary-dark;
+                    box-shadow: 20px 20px #3a3a3a;
+                    h2 {
+                        color: $cream;
+                    }
+                    .body {
+                        color: $cream;
+                        .underPict {
+                            .category {
+                                background-color: $primary-dark;
+                                border:1px solid $cream;
+                            }
+                        }
+                    }
+                    .cart {
+                        background-color: $primary-dark;
+                        border:1px solid $cream;
+                        color: $cream;
+                    }
+                }
+            }
+        }
+
+        // SECTION - google map
+        .google-map {
+            color: $cream;
+        }
+        
+    }
+}
