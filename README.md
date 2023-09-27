@@ -34,7 +34,7 @@ Le site doit être un site Web d'une seule page, avec différentes fonctionnalit
     Trello  
     Gather  
     Photoshop
-    [](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+    ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
 
 [Dark-Kitchen .README](https://github.com/becodeorg/CRL-KELLER-6/blob/main/1.TRAIL/2.The-Hill/1.DOM/7.Dark-Kitchen/readme.md)
