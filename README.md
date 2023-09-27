@@ -47,7 +47,7 @@ Le site doit être un site Web d'une seule page, avec différentes fonctionnalit
 #### Alexandre : [@AlexandreVDW](https://github.com/AlexandreVDW)
 #### Antoine : [@Antoinel74](https://github.com/antoinel74)
 #### Carole : [@Carole-GRD](https://github.com/Carole-GRD)
-#### Elisabeth: [Elibbth](https://github.com/Elibbth) 
+#### Elisabeth: [@Elibbth](https://github.com/Elibbth) 
 
 ![Logo D-K](https://scontent.fcrl2-1.fna.fbcdn.net/v/t39.30808-6/277574351_411485820930691_6655364937035315270_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=opFuzhrrkGYAX__Qx9C&_nc_ht=scontent.fcrl2-1.fna&oh=00_AfDxbytpZIXtlk-kdog8vKHZOUs0-cGlt3S5YB1BqUXQOw&oe=65196B93)
 
