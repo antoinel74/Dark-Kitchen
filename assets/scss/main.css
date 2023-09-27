@@ -699,12 +699,50 @@ header .navbar a:visited {
   position: relative;
   border-radius: 5px;
 }
-.modal .modal-content h2 {
+.modal .modal-content .modal-header {
+  display: flex;
+  justify-content: space-around;
+}
+.modal .modal-content .modal-header h2 {
   font-family: "Permanent Marker", cursive;
   font-size: 1.5em;
   padding-bottom: 12px;
   margin-bottom: 12px;
+  width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.611);
+}
+.modal .modal-content .modal-header span {
+  font-size: 2em;
+}
+.modal .modal-content .modal-header span:hover {
+  color: rgb(182, 77, 77);
+}
+.modal .modal-content table {
+  width: 100%;
+  margin: 12px 0px 24px 0px;
+}
+.modal .modal-content table thead {
+  font-family: "Courier Prime", monospace;
+}
+.modal .modal-content table tbody td {
+  text-align: center;
+}
+.modal .modal-content table tbody td .remove_btn, .modal .modal-content table tbody td .add_btn, .modal .modal-content table tbody td .decrease_btn {
+  border: 1px solid black;
+  background: #f7f7ed;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-family: "Cutive Mono", monospace;
+}
+.modal .modal-content table tbody td .remove_btn:hover, .modal .modal-content table tbody td .add_btn:hover, .modal .modal-content table tbody td .decrease_btn:hover {
+  transform: scale(105%);
+}
+.modal .modal-content table tbody td .add_btn, .modal .modal-content table tbody td .decrease_btn {
+  font-family: "Courier Prime", monospace;
+}
+.modal .modal-content .total_checkout {
+  font-family: "Courier Prime", monospace;
 }
 .modal .modal-content #checkoutButton, .modal .modal-content .clear_btn {
   margin-top: 12px;
@@ -722,32 +760,6 @@ header .navbar a:visited {
 }
 .modal .modal-content .clear_btn {
   background: white;
-}
-.modal .modal-content ul {
-  padding: 24px 0px;
-}
-.modal .modal-content li {
-  display: flex;
-  margin: 2px 0px;
-}
-.modal .modal-content li button {
-  background-color: #f7f7ed;
-  border-radius: 2px;
-  width: 25px;
-  height: 25px;
-  margin-left: 4px;
-  border: none;
-  border: 1px solid black;
-}
-.modal .modal-content li button:hover {
-  transition: transform 220ms ease;
-  transform: scale(110%);
-}
-.modal .modal-content .remove-button {
-  background: rgb(211, 92, 92);
-  border: 1px solid black;
-  cursor: pointer;
-  color: white;
 }
 .modal .close-modal {
   position: absolute;

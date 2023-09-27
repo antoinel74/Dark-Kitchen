@@ -74,6 +74,7 @@ function updateCartModalContent() {
     // Boutons de quantité
     let decreaseBtn = document.createElement("button");
     decreaseBtn.innerText = "-";
+    decreaseBtn.classList = "decrease_btn";
     decreaseBtn.addEventListener("click", () => {
       if (item.quantity > 1) {
         item.quantity -= 1;
@@ -84,6 +85,7 @@ function updateCartModalContent() {
 
     let increaseBtn = document.createElement("button");
     increaseBtn.innerText = "+";
+    increaseBtn.classList = "add_btn";
     increaseBtn.addEventListener("click", () => {
       item.quantity += 1;
       total += item.price;
@@ -97,6 +99,8 @@ function updateCartModalContent() {
 
     let removeButton = document.createElement("button");
     removeButton.innerText = "Remove";
+    removeButton.classList = "remove_btn";
+
     removeButton.addEventListener("click", () => {
       total -= item.price * item.quantity;
       cart.splice(index, 1);
@@ -118,9 +122,13 @@ function updateCartModalContent() {
   let totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
   total_count.innerText = totalCount;
 }
-  // Clear cart
-  function clearCart() {
-    cart = [];
-    total = 0;
-    updateCartModalContent();
-  }
+// Clear cart
+function clearCart() {
+  cart = [];
+  total = 0;
+  updateCartModalContent();
+}
+
+let orderComplete = () => {
+  alert("Hurray ! Your order is confirmed !");
+};
