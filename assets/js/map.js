@@ -13,12 +13,12 @@ let map = L.map('map').setView([51.505, -0.09], 15);
         → maxZoom: 19 définit le niveau de zoom maximal de la carte à 19.
         → attribution est une attribution qui doit apparaître sur la carte pour indiquer que les données sont fournies par OpenStreetMap.
 */
-let myTileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+// L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     maxZoom: 19,
+//     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+// }).addTo(map);
 // ↓ Pour une couleur "light_all" de la tuile
-// L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"', {}).addTo(map);
+L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {}).addTo(map);
 
 
 
@@ -53,14 +53,23 @@ map.on('click', onMapClick);
 
 navigator.geolocation.watchPosition(success, error);
 
+let userMarker, circle;
+
 function success(pos) {
 
     const lat = pos.coords.latitude;
     const lng = pos.coords.longitude;
     const accuracy = pos.coords.accuracy;
+
+    if (userMarker) {
+        map.removeLayer(userMarker);
+        map.removeLayer(circle);
+    }
     
-    L.marker([lat, lng]).addTo(map);
-    L.circle([lat, lng], { radius: accuracy }).addTo(map);
+    userMarker = L.marker([lat, lng]).addTo(map);
+    circle = L.circle([lat, lng], { radius: accuracy }).addTo(map);
+
+    // map.fitBounds(circle.getBounds);
 
 }
 
