@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" type="text/css" href="./assets/scss/main.css" />
   </head>
-  <body class="light">
+  <body>
     <!--NAVBAR-->
     <header>
       <nav class="navbar">
@@ -31,10 +31,6 @@
             <li class="nav_item">
               <a href="#products" class="nav_link">About</a>
             </li>
-            <li class="nav_item darkmode dark">
-              <input type="checkbox" id="darkmode-toggle"/>
-              <label for="darkmode-toggle">
-          </li>
           </ul>
           <button class="hamburger">
             <span class="bar"></span>
@@ -96,9 +92,8 @@
       <button class="category-button" data-genre="Plats">Plats</button>
       <button class="category-button" data-genre="Boisson">Boisson</button>
     </nav>
-    <section class="menu"></section>
+    <article class="menu"></article>
     <!-- Menu fin -->
-
     <!-- About -->
     <section class="about">
       <div class="about_title">
@@ -152,10 +147,9 @@
         <nav>
           <a
             href="https://github.com/antoinel74/Dark-Kitchen.git"
-            target="_blank">
-            <figure>
-              <img src="./assets/img/github.png" alt="lien vers le repo github" />
-            </figure>
+            target="_blank"
+          >
+            <img src="./assets/img/github.png" alt="lien vers le repo github" />
           </a>
         </nav>
         <div>
@@ -168,10 +162,11 @@
     <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/plats.js"></script>
     <script src="./assets/js/menu.js"></script>
-    <script src="./assets/js/darkmode.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="./assets/js/map.js"></script>
     <script src="./assets/js/cart.js"></script>
     <!-- SCRIPTS END -->
