@@ -802,12 +802,43 @@ body.dark header .navbar a {
 body.dark header .navbar p {
   color: #f7f7ed;
 }
-body.dark header .navbar .hamburger {
-  filter: invert(100%);
-}
 body.dark header .navbar .nav_menu {
   background-color: #212021;
   border: 1px solid #f7f7ed;
+}
+body.dark header .navbar .hamburger {
+  filter: invert(100%);
+}
+body.dark header .navbar .shoppingcart svg {
+  filter: invert(100%);
+}
+body.dark header .modal-content {
+  background-color: #000;
+}
+body.dark header .modal-content h2 {
+  border-bottom: 1px solid #f7f7ed;
+}
+body.dark header .modal-content #checkoutButton, body.dark header .modal .modal-content .clear_btn, .modal body.dark header .modal-content .clear_btn {
+  background-color: #212021;
+  color: #f7f7ed;
+  border: 1px solid #f7f7ed;
+}
+body.dark header .modal-content #checkoutButton:hover, body.dark header .modal .modal-content .clear_btn:hover, .modal body.dark header .modal-content .clear_btn:hover {
+  background-color: darkgreen;
+}
+body.dark header .modal-content .clear_btn:hover {
+  background-color: rgb(211, 92, 92) !important;
+}
+body.dark header .modal-content li button {
+  background-color: #212021;
+  color: #f7f7ed;
+  border-color: #f7f7ed;
+}
+body.dark header .modal-content li button:nth-of-type(1):hover {
+  background-color: darkgreen;
+}
+body.dark header .modal-content li button:nth-of-type(2):hover {
+  background-color: orange;
 }
 body.dark .header_main .header_text .arrow {
   filter: invert(100%);
@@ -862,6 +893,10 @@ body.dark footer .content-wrapper {
   body.dark .menu article .content {
     background-color: #212021;
     box-shadow: 20px 20px #3a3a3a;
+  }
+  body.dark .menu article .content:hover {
+    border-radius: 0% 0% 50% 50%/0% 0% 5% 5%;
+    box-shadow: 10px 10px #3a3a3a;
   }
   body.dark .menu article .content h2 {
     color: #f7f7ed;

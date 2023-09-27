@@ -5,22 +5,64 @@ body.dark {
     color: $primary-white;
 
     // HEADER - navbar
-    header .navbar {
-        a {
-            color: $cream;
-        }
-        p {
-            color: $cream;
+    header {
+
+        .navbar {
+            a {
+                color: $cream;
+            }
+            p {
+                color: $cream;
+            }
+    
+            .nav_menu {
+                background-color: $primary-dark;
+                border: 1px solid $cream;
+            }
+            .hamburger {
+                filter: invert(100%);
+            }
+            .shoppingcart {
+                svg {
+                    filter: invert(100%);
+                }
+            }
         }
 
-        .hamburger {
-            filter: invert(100%);
+        .modal-content {
+            background-color: #000;
+            h2 {
+                border-bottom: 1px solid $cream;
+            }
+            #checkoutButton {
+                background-color: $primary-dark;
+                color: $cream;
+                border: 1px solid $cream;
+            }
+            // .clear_btn {
+            //     background-color: #000!important;
+            // }
+            #checkoutButton:hover {
+                background-color: darkgreen;
+            }
+            .clear_btn:hover {
+                background-color: rgb(211, 92, 92)!important;
+            }
+            li {
+                button {
+                    background-color: $primary-dark;
+                    color: $cream;
+                    border-color: $cream;
+                }
+                button:nth-of-type(1):hover {
+                    background-color: darkgreen;
+                }
+                button:nth-of-type(2):hover {
+                    background-color: orange;
+                }
+            }
         }
-        .nav_menu {
-            background-color: $primary-dark;
-            border: 1px solid $cream;
-        }
-    }
+    } 
 
     // HEADER - main
     .header_main {
@@ -127,6 +169,10 @@ body.dark {
                 .content {
                     background-color: $primary-dark;
                     box-shadow: 20px 20px #3a3a3a;
+                    &:hover {
+                        border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+                        box-shadow: 10px 10px #3a3a3a;
+                    }
                     h2 {
                         color: $cream;
                     }
