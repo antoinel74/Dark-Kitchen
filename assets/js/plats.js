@@ -76,4 +76,32 @@ let menu = [
         price: "9",
         description: "Des nouilles tendres et du poulet savoureux, le tout dans un bouillon parfumé. Une explosion de saveurs en un seul plat.",
     },
+    {
+        nom: "Mogu Mogu",
+        image: "./assets/img/mogu.jpg",
+        category: ["Boisson"],
+        price: "3",
+        description: "Une boisson fruitée et pétillante avec des morceaux de pulpe pour une expérience tropicale unique.",
+    },
+    {
+        nom: "Mogchi",
+        image: "./assets/img/mochi.gif",
+        category: ["Dessert"],
+        price: "6",
+        description: "De petits trésors japonais, les Mochi sont des douceurs moelleuses et délicieuses. Ces bouchées sucrées, enveloppées dans une fine couche de riz gluant, vous transportent instantanément au Japon.",
+    },
+    {
+        nom: "Pandan",
+        image: "./assets/img/pandan.jpeg",
+        category: ["Dessert"],
+        price: "7",
+        description: "Un mélange de saveurs délicates et de textures légères qui éveilleront vos papilles à chaque bouchée. Une invitation au voyage gourmand.",
+    },
+    {
+        nom: "Sanshoku",
+        image: "./assets/img/sanshoku.jpg",
+        category: ["Dessert"],
+        price: "9",
+        description: "Le Shanshoku est une harmonie de saveurs, de couleurs et de textures dans chaque assiette. ",
+    },
 ]
