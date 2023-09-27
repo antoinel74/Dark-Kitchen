@@ -2,9 +2,8 @@ let darkMode = document.querySelector('#darkmode-toggle');
 
 
 window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
     darkMode.checked = false;
-    console.log(darkMode.checked);
+    // console.log('darkMode.checked : ', darkMode.checked);
 });
 
 

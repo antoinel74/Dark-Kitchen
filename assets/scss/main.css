@@ -138,10 +138,8 @@ footer {
   width: calc(100% - 80px);
   padding: 20px 40px;
   background-color: #212021;
-  color: #f5f5f5;
   font-family: "Cutive Mono", monospace;
 }
-
 footer .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -154,6 +152,10 @@ footer .content-wrapper {
 footer .content-wrapper p {
   font-size: calc(10px + 0.5rem);
   line-height: 1.5;
+  color: #f7f7ed;
+}
+footer .content-wrapper div:first-of-type {
+  color: #f7f7ed;
 }
 footer .content-wrapper div:first-of-type p:first-of-type {
   font-family: "Permanent Marker", cursive;
@@ -206,7 +208,6 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   margin: 0 auto;
   font-family: "Cutive Mono", monospace;
 }
-
 .google-map .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -227,7 +228,6 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   margin-top: 30px;
   width: 100%;
   height: 80%;
-  filter: sepia(100%) saturate(0.6);
 }
 
 @media only screen and (min-width: 900px) {
@@ -236,14 +236,14 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   }
   .google-map .content-wrapper .text {
     align-self: center;
-    padding: 0 50px;
+    padding: 0 5%;
   }
   .google-map .content-wrapper .text h2 {
     font-family: "Permanent Marker", cursive;
-    font-size: calc(20px + 1rem);
+    font-size: clamp(15px, 3vw, 35px);
   }
   .google-map .content-wrapper .text p {
-    font-size: calc(10px + 0.5rem);
+    font-size: clamp(15px, 2vw, 20px);
     line-height: 1.5;
   }
   .google-map .content-wrapper #map {
@@ -366,7 +366,7 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   background-color: #1e1e1e;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .header_main .header_text h1 {
     font-size: 3em;
   }
@@ -644,6 +644,16 @@ body.dark header .navbar a {
 body.dark header .navbar p {
   color: #f7f7ed;
 }
+body.dark header .navbar .hamburger {
+  filter: invert(100%);
+}
+body.dark header .navbar .nav_menu {
+  background-color: #212021;
+  border: 1px solid #f7f7ed;
+}
+body.dark .header_main .header_text .arrow {
+  filter: invert(100%);
+}
 body.dark .header_main .header_background {
   filter: invert(100%);
 }
@@ -662,6 +672,12 @@ body.dark .menu article .content .cart {
 body.dark .google-map {
   color: #f7f7ed;
 }
+body.dark footer {
+  background-color: #000;
+}
+body.dark footer .content-wrapper {
+  border-top: 1px solid #f7f7ed;
+}
 
 @media only screen and (min-width: 900px) {
   body.dark {
@@ -673,6 +689,10 @@ body.dark .google-map {
   }
   body.dark header .navbar p {
     color: #f7f7ed;
+  }
+  body.dark header .navbar .nav_menu {
+    background-color: transparent;
+    border: none;
   }
   body.dark .header_main .header_background {
     filter: invert(100%);

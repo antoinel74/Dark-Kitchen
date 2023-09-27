@@ -4,6 +4,7 @@ body.dark {
     background-color: #000;
     color: $primary-white;
 
+    // HEADER - navbar
     header .navbar {
         a {
             color: $cream;
@@ -11,14 +12,32 @@ body.dark {
         p {
             color: $cream;
         }
+
+        .hamburger {
+            filter: invert(100%);
+        }
+        .nav_menu {
+            background-color: $primary-dark;
+            border: 1px solid $cream;
+        }
     }
 
+    // HEADER - main
     .header_main {
+        // Partie texuelle
+        .header_text {
+            // Flèche
+            .arrow {
+                filter: invert(100%);
+            }
+        }
+        // Image de background
         .header_background {
             filter: invert(100%);
         }
     }
 
+    // BUTTONS - filter
     .filter{
         .category-button{
             background: $primary-dark;
@@ -26,6 +45,7 @@ body.dark {
         }
     }
 
+    // SECTION - menu
     .menu {
         article {
             .content {
@@ -45,12 +65,25 @@ body.dark {
         }
     }
 
+    // SECTION - google map
     .google-map {
         color: $cream;
+    }
+
+    // FOOTER
+    footer {
+        background-color: #000;
+        .content-wrapper {
+            border-top: 1px solid $cream;
+        }
     }
     
 }
 
+
+// ----------------------------------------------------------
+//             MEDIA QUERIES
+// ----------------------------------------------------------
 
 @media only screen and (min-width: $break-desktop){
     body.dark {
@@ -58,6 +91,7 @@ body.dark {
         background-color: #000;
         color: $primary-white;
     
+        // HEADER - navbar
         header .navbar {
             a {
                 color: $cream;
@@ -65,14 +99,21 @@ body.dark {
             p {
                 color: $cream;
             }
+
+            .nav_menu {
+                background-color: transparent;
+                border: none;
+            }
         }
     
+        // HEADER - main
         .header_main {
             .header_background {
                 filter: invert(100%);
             }
         }
 
+        // BUTTONS - filter
         .filter{
             .category-button{
                 background: $primary-dark;
@@ -80,6 +121,7 @@ body.dark {
             }
         }
     
+        // SECTION - menu
         .menu {
             article {
                 .content {
@@ -106,6 +148,7 @@ body.dark {
             }
         }
 
+        // SECTION - google map
         .google-map {
             color: $cream;
         }
