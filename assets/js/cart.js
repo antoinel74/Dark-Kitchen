@@ -23,10 +23,14 @@ shoppingCartButton.addEventListener("click", openCartModal);
 closeCartModalHandler.addEventListener("click", closeCartModal);
 
 for (let button of addButtons) {
-  button.addEventListener("click", function () {
-    addToCart(button.closest(".card"));
-    updateCartModalContent();
-  });
+  button.addEventListener(
+    "click",
+    function () {
+      addToCart(button.closest(".card"));
+      updateCartModalContent();
+    },
+    { once: true }
+  );
 }
 
 // Add item to cart
@@ -54,7 +58,7 @@ function updateCartModalContent() {
   total = 0;
   cart.forEach((item, index) => {
     let listItem = document.createElement("li");
-    listItem.innerText = `${item.name} - €${item.price} - Quantity: ${item.quantity}`;
+    listItem.innerText = `${item.name} - €${item.price} - (${item.quantity})`;
     listItem.classList.add("cart_items");
 
     let increaseBtn = document.createElement("button");
@@ -76,7 +80,7 @@ function updateCartModalContent() {
     });
 
     let removeButton = document.createElement("button");
-    removeButton.innerText = "Remove";
+    removeButton.innerText = "x";
     removeButton.classList.add("remove-button");
     removeButton.addEventListener("click", () => {
       removeFromCart(index);
@@ -97,4 +101,11 @@ function updateCartModalContent() {
 function removeFromCart(index) {
   total -= cart[index].price;
   cart.splice(index, 1);
+}
+
+// Clear cart
+function clearCart() {
+  cart = [];
+  total = 0;
+  updateCartModalContent();
 }

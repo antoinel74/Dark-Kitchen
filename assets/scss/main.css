@@ -685,28 +685,59 @@ header .navbar a:visited {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 600px;
+  max-width: 700px;
   position: relative;
   border-radius: 5px;
 }
 .modal .modal-content h2 {
   font-family: "Permanent Marker", cursive;
+  font-size: 1.5em;
   padding-bottom: 12px;
   margin-bottom: 12px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.611);
 }
-.modal .modal-content #checkoutButton {
+.modal .modal-content #checkoutButton, .modal .modal-content .clear_btn {
   margin-top: 12px;
   border: none;
   background: #f7f7ed;
   border-radius: 5px;
   border: 1px solid black;
-  font-family: "Cutive Mono", monospace;
+  font-family: "Courier Prime", monospace;
   padding: 12px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
-.modal .modal-content #checkoutButton:hover {
+.modal .modal-content #checkoutButton:hover, .modal .modal-content .clear_btn:hover {
   transform: scale(105%);
+}
+.modal .modal-content .clear_btn {
+  background: white;
+}
+.modal .modal-content ul {
+  padding: 24px 0px;
+}
+.modal .modal-content li {
+  display: flex;
+  margin: 2px 0px;
+}
+.modal .modal-content li button {
+  background-color: #f7f7ed;
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  margin-left: 4px;
+  border: none;
+  border: 1px solid black;
+}
+.modal .modal-content li button:hover {
+  transition: transform 220ms ease;
+  transform: scale(110%);
+}
+.modal .modal-content .remove-button {
+  background: rgb(211, 92, 92);
+  border: 1px solid black;
+  cursor: pointer;
+  color: white;
 }
 .modal .close-modal {
   position: absolute;
