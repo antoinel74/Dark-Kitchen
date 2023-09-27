@@ -302,7 +302,7 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   position: absolute;
 }
 
-.navbar {
+header .navbar {
   width: 100%;
   min-height: 60px;
   display: flex;
@@ -314,7 +314,10 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   z-index: 199;
   background: none;
 }
-.navbar .nav_menu {
+header .navbar .navbar-right {
+  display: flex;
+}
+header .navbar .navbar-right .nav_menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -323,29 +326,47 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   font-family: "Courier Prime", monospace;
   font-size: 1.2rem;
 }
-.navbar .logo {
+header .navbar .navbar-right .shoppingcart {
+  margin-right: 16px;
+  background: none;
+  border: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+header .navbar .navbar-right .shoppingcart .total_count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 4px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 0.8em;
+}
+header .navbar .logo {
   font-family: "Permanent Marker", cursive;
   font-size: 2em;
   color: #1e1e1e;
   margin-left: 12px;
 }
-.navbar .logo:visited {
+header .navbar .logo:visited {
   color: black;
   text-decoration: none;
 }
-.navbar .nav_link {
+header .navbar .nav_link {
   transition: 0.5s ease;
   color: #1e1e1e;
   animation: transform 0.3s ease-in-out;
 }
-.navbar .nav_link:hover {
+header .navbar .nav_link:hover {
   text-decoration: underline;
 }
-.navbar a {
+header .navbar a {
   text-decoration: none;
   cursor: pointer;
 }
-.navbar a:visited {
+header .navbar a:visited {
   text-decoration: none;
 }
 
@@ -414,36 +435,88 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   }
 }
 .about {
-  max-width: 80%;
-  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+.about .about_title {
+  padding: 36px 0;
 }
 .about h2 {
   font-family: "Permanent Marker", cursive;
   text-align: center;
   font-size: 2rem;
-  padding-top: 20px 0;
+  margin-bottom: 24px;
 }
 .about .about_slogan {
   display: flex;
   justify-content: center;
   text-align: center;
   font-family: "Cutive Mono", monospace;
-  font-weight: 600;
-  padding: 20px 0;
+  font-weight: 800;
 }
 .about .about_container {
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  height: 600px;
 }
 .about .about_container .about_text {
   font-family: "Cutive Mono", monospace;
-  text-align: center;
-  align-content: space-around;
-  padding-left: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-.about .about_container .kitchen-front {
+.about .about_container .about_text h3 {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 800;
+  padding-bottom: 24px;
+}
+.about .about_container figure {
+  width: 100%;
+  aspect-ratio: 16/12;
+  position: relative;
+}
+.about .about_container figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
-  height: auto;
+}
+
+@media (max-width: 968px) {
+  .about .about_container {
+    flex-direction: column;
+    padding-bottom: 48px;
+    margin: 0 48px;
+  }
+  .about .about_container .about_text h3 {
+    margin-top: 48px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .about .about_container {
+    padding: 36px 0;
+  }
+  .about .about_container figure {
+    margin: 0 36px;
+  }
+  .about .about_container .about_text {
+    margin: 0 36px;
+  }
+}
+.TitreMenu {
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-size: 2rem;
+  padding-top: 2%;
 }
 
 .filter {
@@ -460,6 +533,24 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
 }
 
+@media only screen and (min-width: 900px) {
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 2%;
+  }
+  .filter .category-button {
+    position: relative;
+    background: #f7f7ed;
+    border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
+    color: black;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+  }
+}
 .menu {
   display: flex;
   flex-direction: column;
@@ -519,25 +610,10 @@ footer .content-wrapper div:last-of-type p:first-of-type {
   padding: 2%;
   font-family: "Cutive Mono", monospace;
   margin-bottom: 2%;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 900px) {
-  .filter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 8px;
-    margin-top: 2%;
-  }
-  .filter .category-button {
-    position: relative;
-    background: #f7f7ed;
-    border-radius: 0% 0% 0% 0%/0% 0% 0% 0%;
-    color: black;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s ease;
-  }
   .menu {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -590,6 +666,88 @@ footer .content-wrapper div:last-of-type p:first-of-type {
     height: 150px;
   }
 }
+/* Styles pour le modal */
+.modal {
+  position: fixed;
+  font-family: "Cutive Mono", monospace;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 7000;
+  overflow: auto;
+  line-height: 1.4;
+}
+.modal .modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 700px;
+  position: relative;
+  border-radius: 5px;
+}
+.modal .modal-content h2 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.5em;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.611);
+}
+.modal .modal-content #checkoutButton, .modal .modal-content .clear_btn {
+  margin-top: 12px;
+  border: none;
+  background: #f7f7ed;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: "Courier Prime", monospace;
+  padding: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.modal .modal-content #checkoutButton:hover, .modal .modal-content .clear_btn:hover {
+  transform: scale(105%);
+}
+.modal .modal-content .clear_btn {
+  background: white;
+}
+.modal .modal-content ul {
+  padding: 24px 0px;
+}
+.modal .modal-content li {
+  display: flex;
+  margin: 2px 0px;
+}
+.modal .modal-content li button {
+  background-color: #f7f7ed;
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  margin-left: 4px;
+  border: none;
+  border: 1px solid black;
+}
+.modal .modal-content li button:hover {
+  transition: transform 220ms ease;
+  transform: scale(110%);
+}
+.modal .modal-content .remove-button {
+  background: rgb(211, 92, 92);
+  border: 1px solid black;
+  cursor: pointer;
+  color: white;
+}
+.modal .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
 li.darkmode {
   display: flex;
 }
