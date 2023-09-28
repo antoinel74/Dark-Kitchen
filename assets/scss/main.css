@@ -713,6 +713,10 @@ header .navbar a:visited {
   margin-bottom: 2%;
   cursor: pointer;
 }
+.menu article .content .cart:hover {
+  background-color: black;
+  color: white;
+}
 
 @media only screen and (min-width: 900px) {
   .menu {
